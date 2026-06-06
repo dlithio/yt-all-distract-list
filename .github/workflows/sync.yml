@@ -25,6 +25,9 @@ jobs:
       - name: Lint gate (no publish on failure)
         run: uv run python -m lockedin_filters.lint dist/lockedin-youtube.txt --supplement data/supplement.txt
       - name: Maintenance report
+        # Observability only — must never gate publishing. A report failure must not
+        # block committing the already-lint-passed dist.
+        continue-on-error: true
         run: |
           uv run python -m lockedin_filters.report \
             --upstream upstream --supplement data/supplement.txt \
