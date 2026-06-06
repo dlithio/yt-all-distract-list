@@ -31,7 +31,19 @@ OVER_BROAD_SHELLS = frozenset({
     "ytd-page-manager",
 })
 
-_VALID_PREFIX = re.compile(r"^youtube\.com#@?\??#")
+# Search must stay usable (explicit user requirement). Bare search box / results-page
+# containers must never be hidden whole. EXACT match, so scoped rules that strip
+# distractions inside search (e.g. `ytd-search ytd-shelf-renderer`) stay allowed.
+# Publish-gate backstop for extract.py's SEARCH_SURFACES guard.
+SEARCH_SURFACES = frozenset({
+    "ytd-search", "ytm-search",
+    "ytd-searchbox", "ytm-searchbox",
+    "ytd-two-column-search-results-renderer",
+})
+
+# Only HIDE markers are valid: `##` and `#?#`. Allowlist markers (`#@#`/`#@?#`) are
+# rejected as invalid prefixes — see build._RULE_RE for the rationale.
+_VALID_PREFIX = re.compile(r"^youtube\.com#\??#")
 _CONTAINS_ARG = re.compile(r":contains\((.*?)\)")
 _TEXT_OR_ARIA = re.compile(r":has-text\((.*?)\)|:contains\((.*?)\)|\[aria-label[^\]]*\]")
 
@@ -76,6 +88,8 @@ def lint_text(text: str, supplement_selectors: set[str], max_rules: int = MAX_RU
             errors.append(f"targets protected element: {line}")
         if sel in OVER_BROAD_SHELLS:
             errors.append(f"targets over-broad page shell: {line}")
+        if sel in SEARCH_SURFACES:
+            errors.append(f"targets protected search surface: {line}")
         if references_ask(sel):
             errors.append(f"targets protected 'Ask' button: {line}")
         if line in seen:

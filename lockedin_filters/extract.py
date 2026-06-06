@@ -32,6 +32,17 @@ OVER_BROAD = frozenset({
     "yt-navigate-finish", "yt-page-data-updated", "yt-page-type-changed",
 })
 
+# Search must stay usable (explicit user requirement). These are the *bare* search
+# box / results-page containers — hiding any of them whole would take search down.
+# Matched against the EXACT normalized selector, so SCOPED rules that strip
+# distractions *inside* search (e.g. `ytd-search ytd-shelf-renderer`,
+# `[page-subtype="search"] ytd-reel-shelf-renderer`) are intentionally still allowed.
+SEARCH_SURFACES = frozenset({
+    "ytd-search", "ytm-search",
+    "ytd-searchbox", "ytm-searchbox",
+    "ytd-two-column-search-results-renderer",
+})
+
 # Declarations that mean "hide" (we want these blocks).
 HIDE_DECLS = ("display:none", "visibility:hidden", "opacity:0", "max-height:0")
 
@@ -72,7 +83,7 @@ def normalize_selector(selector: str) -> str | None:
     # in from a `tagName.startsWith('ytd-')` probe — these are not real elements.
     if sel in YT_TOKENS or sel.endswith("-"):
         return None
-    if sel in OVER_BROAD:
+    if sel in OVER_BROAD or sel in SEARCH_SURFACES:
         return None
     low = sel.lower()
     if any(p.lower() in low for p in PROTECTED_SUBSTRINGS):

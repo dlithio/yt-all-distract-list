@@ -76,6 +76,20 @@ def test_over_broad_shell_flagged_but_scoped_descendant_ok():
     assert not any("over-broad page shell" in e for e in lint_text(ok, set()))
 
 
+def test_bare_search_surface_flagged_but_scoped_search_cleanup_ok():
+    bad = "! Title: x\n! Expires: 1 day\n! Version: 1\n!\nyoutube.com##ytd-search\n"
+    assert any("protected search surface" in e for e in lint_text(bad, set()))
+    ok = ("! Title: x\n! Expires: 1 day\n! Version: 1\n!\n"
+          "youtube.com##ytd-search ytd-shelf-renderer\n")
+    assert not any("protected search surface" in e for e in lint_text(ok, set()))
+
+
+def test_allowlist_marker_rejected_as_invalid_prefix():
+    # `#@#` un-hide lines must not be accepted (would be re-emitted as hides).
+    text = "! Title: x\n! Expires: 1 day\n! Version: 1\n!\nyoutube.com#@#ytd-comments\n"
+    assert any("invalid rule prefix" in e for e in lint_text(text, set()))
+
+
 def test_supplement_floor_violation_flagged():
     text = "! Title: x\n! Expires: 1 day\n! Version: 1\n!\nyoutube.com##ytd-comments\n"
     errors = lint_text(text, {"ytd-comments", "ytd-missing"})

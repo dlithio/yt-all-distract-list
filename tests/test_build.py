@@ -10,6 +10,8 @@ def test_selector_of_parses_markers():
     assert selector_of("youtube.com###related") == "#related"
     assert selector_of("youtube.com#?#ytd-x:contains(Shorts)") == "ytd-x:contains(Shorts)"
     assert selector_of("! a comment") is None
+    # allowlist/exception markers are not hide rules -> not parsed
+    assert selector_of("youtube.com#@#ytd-comments") is None
 
 
 def test_canonical_selector_normalizes_contains_to_has_text():

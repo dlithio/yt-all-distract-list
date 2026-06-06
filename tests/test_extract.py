@@ -47,6 +47,16 @@ def test_normalize_rejects_over_broad_shells():
         'ytd-browse[page-subtype="home"] #primary'
 
 
+def test_normalize_protects_bare_search_surfaces_but_allows_scoped():
+    # Search must stay usable: bare search containers are never hidden...
+    for surface in ("ytd-search", "ytm-search", "ytd-searchbox",
+                    "ytd-two-column-search-results-renderer"):
+        assert normalize_selector(surface) is None
+    # ...but rules that strip distractions *inside* search are still allowed.
+    assert normalize_selector("ytd-search ytd-shelf-renderer") == "ytd-search ytd-shelf-renderer"
+    assert normalize_selector("ytm-search ytm-shelf-renderer") == "ytm-search ytm-shelf-renderer"
+
+
 def test_normalize_rejects_bare_and_truncated_tokens():
     assert normalize_selector("ytd-") is None
     assert normalize_selector("yt-") is None

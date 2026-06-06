@@ -13,9 +13,11 @@ from . import extract
 from .textrules import has_contains, has_text, to_contains, to_has_text
 
 DOMAIN = "youtube.com"
-# Matches a cosmetic-filter line and captures the selector after the marker
-# (## element-hide, #?# extended-css, #@# allowlist).
-_RULE_RE = re.compile(r"^youtube\.com#@?\??#(.+)$")
+# Matches a cosmetic-filter line and captures the selector after the marker.
+# We only ever produce/consume HIDE rules: `##` (element-hide) and `#?#` (extended-css).
+# Allowlist/exception markers (`#@#`/`#@?#`) are deliberately NOT matched — accepting
+# them would let an un-hide line be silently re-emitted as a hide rule.
+_RULE_RE = re.compile(r"^youtube\.com#\??#(.+)$")
 
 
 def selector_of(line: str) -> str | None:
