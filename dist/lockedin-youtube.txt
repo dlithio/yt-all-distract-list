@@ -314,7 +314,6 @@ youtube.com##ytm-comments-entry-point-header-renderer
 youtube.com##ytm-comments-section-renderer
 youtube.com##ytm-compact-autoplay-renderer
 youtube.com##ytm-compact-video-renderer
-youtube.com##ytm-engagement-panel-section-list-renderer
 youtube.com##ytm-feed
 youtube.com##ytm-grid-video-renderer
 youtube.com##ytm-horizontal-card-list-renderer

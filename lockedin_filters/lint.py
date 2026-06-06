@@ -16,6 +16,7 @@ REQUIRED_HEADERS = ("! Title:", "! Expires:", "! Version:")
 PROTECTED = (
     "#movie_player", ".html5-video-player", ".html5-main-video", "video.video-stream",
     "ytd-engagement-panel-section-list-renderer", "ytd-transcript-segment-list-renderer",
+    "ytm-engagement-panel-section-list-renderer", "ytm-transcript-segment-list-renderer",
 )
 
 _VALID_PREFIX = re.compile(r"^youtube\.com#@?\??#")

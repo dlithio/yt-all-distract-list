@@ -29,6 +29,13 @@ def test_normalize_rejects_protected_transcript_panel():
     assert normalize_selector("ytd-transcript-segment-list-renderer") is None
 
 
+def test_normalize_rejects_protected_mobile_panels():
+    # AdGuard iOS targets m.youtube.com; the mobile ytm- twins of the
+    # engagement/transcript side panel must be protected too (spec: best-effort ytm-*).
+    assert normalize_selector("ytm-engagement-panel-section-list-renderer") is None
+    assert normalize_selector("ytm-transcript-segment-list-renderer") is None
+
+
 def test_normalize_rejects_over_broad_generic():
     assert normalize_selector("img") is None
     assert normalize_selector("#primary") is None

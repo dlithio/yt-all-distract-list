@@ -62,6 +62,12 @@ def test_references_ask_flagged():
     assert not references_ask("ytd-comments")
 
 
+def test_protected_mobile_engagement_panel_flagged():
+    text = ("! Title: x\n! Expires: 1 day\n! Version: 1\n!\n"
+            "youtube.com##ytm-engagement-panel-section-list-renderer\n")
+    assert any("protected element" in e for e in lint_text(text, set()))
+
+
 def test_supplement_floor_violation_flagged():
     text = "! Title: x\n! Expires: 1 day\n! Version: 1\n!\nyoutube.com##ytd-comments\n"
     errors = lint_text(text, {"ytd-comments", "ytd-missing"})
