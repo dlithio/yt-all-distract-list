@@ -31,3 +31,30 @@ def test_normalize_rejects_over_broad_generic():
 
 def test_normalize_keeps_view_model_components():
     assert normalize_selector("like-button-view-model") == "like-button-view-model"
+
+
+from lockedin_filters.extract import (
+    is_hide_block, harvest_css_blocks, harvest_string_selectors,
+)
+
+
+def test_is_hide_block_true_for_display_none():
+    assert is_hide_block("display:none !important;") is True
+
+
+def test_is_hide_block_false_for_restore():
+    assert is_hide_block("visibility:visible; opacity:1;") is False
+
+
+def test_harvest_css_blocks_returns_selector_and_decl():
+    js = 'el.textContent = `ytd-reel-shelf-renderer, #related { display:none !important; }`;'
+    blocks = harvest_css_blocks(js)
+    assert ("ytd-reel-shelf-renderer, #related ", " display:none !important; ") in blocks
+
+
+def test_harvest_string_selectors_picks_yt_like_strings():
+    js = "const sel = 'ytd-comments'; const noise = 'hello world'; toggle(\"#related\");"
+    found = harvest_string_selectors(js)
+    assert "ytd-comments" in found
+    assert "#related" in found
+    assert "hello world" not in found

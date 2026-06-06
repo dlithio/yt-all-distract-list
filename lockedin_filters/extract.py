@@ -56,3 +56,41 @@ def normalize_selector(selector: str) -> str | None:
     if not any(tok in sel for tok in YT_TOKENS):
         return None
     return sel
+
+
+_TEMPLATE_LITERAL = re.compile(r"`([^`]*)`", re.DOTALL)
+_CSS_RULE = re.compile(r"([^{}]+)\{([^{}]*)\}", re.DOTALL)
+_STRING_LITERAL = re.compile(r"""(['"])((?:\\.|(?!\1).)*)\1""")
+
+
+def is_hide_block(declaration: str) -> bool:
+    """True if a CSS declaration block hides (and is not a restore/keep-visible block)."""
+    d = declaration.replace(" ", "").lower()
+    if any(r.replace(" ", "") in d for r in RESTORE_DECLS):
+        return False
+    return any(h.replace(" ", "") in d for h in HIDE_DECLS)
+
+
+def harvest_css_blocks(js_text: str) -> list[tuple[str, str]]:
+    """Return (selector_list, declaration) pairs found inside JS template literals."""
+    blocks: list[tuple[str, str]] = []
+    for literal in _TEMPLATE_LITERAL.findall(js_text):
+        if "{" not in literal:
+            continue
+        for sel_part, decl in _CSS_RULE.findall(literal):
+            blocks.append((sel_part, decl))
+    return blocks
+
+
+def _looks_like_selector(value: str) -> bool:
+    return any(tok in value for tok in YT_TOKENS) or ":has(" in value or "[overlay-style" in value
+
+
+def harvest_string_selectors(js_text: str) -> list[str]:
+    """Return selector-like string/quote literals (covers querySelectorAll args and the
+    shared SELECTORS dict)."""
+    out: list[str] = []
+    for _quote, value in _STRING_LITERAL.findall(js_text):
+        if _looks_like_selector(value):
+            out.append(value)
+    return out
