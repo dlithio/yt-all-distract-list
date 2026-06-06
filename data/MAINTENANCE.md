@@ -6,21 +6,13 @@
 
 ## Changes since last run
 
-_Baseline run — 304 selectors recorded; future runs show only what changed._
+_No new selectors._
+
+_No removed selectors._
 
 ## Unblocked candidates
 
 Selectors the extension references that your list does NOT block. Add the ones you want to `data/supplement.txt`. ⚠ marks over-broad/protected selectors — scope them before adding or they may blank a page.
-
-### From real hide-CSS (usually safe to adopt)
-- `#related ytd-continuation-item-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
-- `#related ytd-item-section-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
-- `#secondary #related:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
-- `#secondary ytd-continuation-item-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
-- `#secondary ytd-item-section-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
-- `#secondary ytd-watch-next-secondary-results-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
-- `ytd-watch-next-secondary-results-renderer ytd-continuation-item-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
-- `ytd-watch-next-secondary-results-renderer ytd-item-section-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
 
 ### From query-anchors only (often over-broad — scope before adding)
 - `#secondary #items`
@@ -54,12 +46,9 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `more-from-yt-spacer`
 - `yt-badge-view-model`
 - `yt-chip-cloud-chip-renderer`
-- `yt-lockup-view-model`  ⚠ shared content renderer — would blank search
-- `ytd-app`  ⚠ over-broad page shell — scope before adding
 - `ytd-backstage-post-thread-renderer`
 - `ytd-brand-video-singleton-renderer`
 - `ytd-browse[page-subtype="home"]`
-- `ytd-channel-renderer`  ⚠ shared content renderer — would blank search
 - `ytd-chips-shelf-with-video-shelf-renderer`
 - `ytd-comments#comments`
 - `ytd-comments-entry-point-header-renderer`
@@ -68,10 +57,7 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `ytd-compact-radio-renderer`
 - `ytd-compact-video-renderer`
 - `ytd-compact-video-renderer[is-shorts]`
-- `ytd-continuation-item-renderer`  ⚠ shared content renderer — would blank search
-- `ytd-engagement-panel-section-list-renderer`  ⚠ protected element — do not hide
 - `ytd-expanded-shelf-contents-renderer`
-- `ytd-grid-video-renderer`  ⚠ shared content renderer — would blank search
 - `ytd-guide-entry-renderer`
 - `ytd-guide-entry-renderer #endpoint[title="Home"]`
 - `ytd-guide-entry-renderer #endpoint[title="Shorts"]`
@@ -87,7 +73,6 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `ytd-guide-section-renderer`
 - `ytd-guide-section-renderer:has(a#endpoint[href^="/feed/subscriptions"])`
 - `ytd-horizontal-card-list-renderer`
-- `ytd-item-section-renderer`  ⚠ shared content renderer — would blank search
 - `ytd-item-section-renderer > #contents`
 - `ytd-logo`
 - `ytd-mini-guide-entry-renderer`
@@ -101,8 +86,6 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `ytd-mini-guide-entry-renderer a[title="Shorts"]`
 - `ytd-playlist-panel-renderer`
 - `ytd-playlist-panel-view-model`
-- `ytd-playlist-renderer`  ⚠ shared content renderer — would blank search
-- `ytd-playlist-video-renderer`  ⚠ shared content renderer — would blank search
 - `ytd-rich-grid-renderer`
 - `ytd-rich-grid-row`
 - `ytd-rich-item-renderer`
@@ -117,23 +100,16 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `ytd-rich-shelf-renderer[has-expansion-button][restrict-contents-overflow]`
 - `ytd-shelf-renderer`
 - `ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]`
-- `ytd-transcript-segment-list-renderer`  ⚠ protected element — do not hide
 - `ytd-two-column-browse-results-renderer`
 - `ytd-two-column-browse-results-renderer #primary`
-- `ytd-video-renderer`  ⚠ shared content renderer — would blank search
 - `ytd-watch-next-secondary-results-renderer`
-- `ytm-app`  ⚠ over-broad page shell — scope before adding
 - `ytm-backstage-post-renderer`
-- `ytm-browse`  ⚠ over-broad page shell — scope before adding
 - `ytm-comment-thread-renderer`
 - `ytm-comments-entry-point-header-renderer`
 - `ytm-compact-autoplay-renderer`
 - `ytm-compact-video-renderer`
-- `ytm-engagement-panel-section-list-renderer`  ⚠ protected element — do not hide
 - `ytm-feed`
-- `ytm-grid-video-renderer`  ⚠ shared content renderer — would blank search
 - `ytm-horizontal-card-list-renderer`
-- `ytm-item-section-renderer`  ⚠ shared content renderer — would blank search
 - `ytm-item-section-renderer:has(ytm-backstage-post-renderer)`
 - `ytm-item-section-renderer:has(ytm-post-renderer)`
 - `ytm-item-section-renderer[section-identifier="related-items"]`
@@ -149,6 +125,32 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `ytm-rich-shelf-renderer`
 - `ytm-shelf-renderer`
 - `ytm-structured-description-content-renderer`
+
+### ⚠ Guarded — do NOT add without scoping (the lint gate will reject the bare form)
+- `#related ytd-continuation-item-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
+- `#related ytd-item-section-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
+- `#secondary #related:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
+- `#secondary ytd-continuation-item-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
+- `#secondary ytd-item-section-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
+- `#secondary ytd-watch-next-secondary-results-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
+- `yt-lockup-view-model`  ⚠ shared content renderer — would blank search
+- `ytd-app`  ⚠ over-broad page shell — scope before adding
+- `ytd-channel-renderer`  ⚠ shared content renderer — would blank search
+- `ytd-continuation-item-renderer`  ⚠ shared content renderer — would blank search
+- `ytd-engagement-panel-section-list-renderer`  ⚠ protected element — do not hide
+- `ytd-grid-video-renderer`  ⚠ shared content renderer — would blank search
+- `ytd-item-section-renderer`  ⚠ shared content renderer — would blank search
+- `ytd-playlist-renderer`  ⚠ shared content renderer — would blank search
+- `ytd-playlist-video-renderer`  ⚠ shared content renderer — would blank search
+- `ytd-transcript-segment-list-renderer`  ⚠ protected element — do not hide
+- `ytd-video-renderer`  ⚠ shared content renderer — would blank search
+- `ytd-watch-next-secondary-results-renderer ytd-continuation-item-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
+- `ytd-watch-next-secondary-results-renderer ytd-item-section-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide
+- `ytm-app`  ⚠ over-broad page shell — scope before adding
+- `ytm-browse`  ⚠ over-broad page shell — scope before adding
+- `ytm-engagement-panel-section-list-renderer`  ⚠ protected element — do not hide
+- `ytm-grid-video-renderer`  ⚠ shared content renderer — would blank search
+- `ytm-item-section-renderer`  ⚠ shared content renderer — would blank search
 - `ytm-video-with-context-renderer`  ⚠ shared content renderer — would blank search
 - `ytm-watch`  ⚠ over-broad page shell — scope before adding
 

@@ -85,6 +85,12 @@ def test_render_markdown_has_counts_changes_and_warnings():
     assert "ytd-video-renderer" in md               # unblocked candidate listed
     assert "⚠" in md                                 # warning marker for the guarded candidate
     assert "ytd-reel-shelf-renderer" not in md.split("## Unblocked")[1]  # published -> not in unblocked list
+    # a guarded candidate must NOT sit under the "safe to adopt" header — it goes in
+    # the dedicated Guarded section.
+    safe_section = md.split("usually safe to adopt")[1].split("###")[0]
+    assert "ytd-video-renderer" not in safe_section
+    assert "ytd-cool-new-renderer" in safe_section   # unguarded css candidate IS safe-to-adopt
+    assert "Guarded — do NOT add" in md
 
 
 def test_render_markdown_first_run_shows_baseline_not_churn():

@@ -139,17 +139,26 @@ def render_markdown(annotated: list[dict], diff: dict, *, build_date: str, upstr
         "them before adding or they may blank a page."
     )
     out.append("")
+    # Separate the safe (unguarded) candidates from the guarded ones so a guarded
+    # selector is never listed under a "safe to adopt" header.
+    safe = [c for c in unblocked if c["guard"] is None]
+    guarded = [c for c in unblocked if c["guard"] is not None]
     groups = (
         ("css", "From real hide-CSS (usually safe to adopt)"),
         ("both", "From both hide-CSS and query-anchors"),
         ("string", "From query-anchors only (often over-broad — scope before adding)"),
     )
     for key, title in groups:
-        rows = [c for c in unblocked if _bucket(c["sources"]) == key]
+        rows = [c for c in safe if _bucket(c["sources"]) == key]
         if not rows:
             continue
         out.append(f"### {title}")
         for c in rows:
+            out.append(f"- `{c['selector']}`")
+        out.append("")
+    if guarded:
+        out.append("### ⚠ Guarded — do NOT add without scoping (the lint gate will reject the bare form)")
+        for c in guarded:
             note = _GUARD_NOTE.get(c["guard"], "")
             out.append(f"- `{c['selector']}`" + (f"  {note}" if note else ""))
         out.append("")
