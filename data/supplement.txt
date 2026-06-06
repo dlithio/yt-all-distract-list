@@ -1,0 +1,67 @@
+! ==============================================================================
+! YOUTUBE DE-ADDICTION FILTER LIST (Optimized for Desktop & Mobile)
+! Source of truth for the curated floor. Written in uBO desktop style;
+! build.py auto-generates the AdGuard #?#:contains twins.
+! ==============================================================================
+
+! --- 1. CORE FEED & SIDEBAR OVERHAUL ---
+youtube.com##ytd-browse[page-subtype="home"] #primary
+youtube.com###related
+
+! --- 2. SHORTS REMOVAL ---
+youtube.com##ytd-mini-guide-entry-renderer:has(a[title="Shorts"])
+youtube.com##ytd-guide-entry-renderer:has(a[title="Shorts"])
+youtube.com##ytm-pivot-bar-item-renderer:has-text(Shorts)
+youtube.com##ytd-rich-shelf-renderer:has([is-shorts])
+youtube.com##ytm-reel-shelf-renderer
+
+! --- 3. "YOU" & "EXPLORE" SECTIONS ---
+youtube.com##ytd-guide-section-renderer:has(a[title="Shopping"])
+youtube.com##ytd-guide-section-renderer:has(a[title="YouTube Premium"])
+youtube.com##ytd-guide-entry-renderer:has(a[title="History"])
+youtube.com##ytd-guide-entry-renderer:has(a[title="Playlists"])
+youtube.com##ytd-guide-entry-renderer:has(a[title="Watch later"])
+youtube.com##ytd-guide-entry-renderer:has(a[title="Liked videos"])
+youtube.com##ytd-guide-entry-renderer:has(a[title="Your videos"])
+youtube.com##ytd-guide-entry-renderer:has(a[title="Downloads"])
+youtube.com##ytd-guide-collapsible-entry-renderer
+
+! --- 4. THUMBNAIL ERADICATION ---
+youtube.com##ytd-thumbnail img
+youtube.com##ytd-playlist-thumbnail img
+youtube.com##.media-item-thumbnail-container img
+youtube.com##ytm-thumbnail-element img
+youtube.com##ytd-playlist-header-renderer yt-image
+youtube.com##ytd-playlist-header-renderer .hero-image-container
+
+! --- 5. PLAYER DISTRACTIONS & END SCREENS ---
+youtube.com###mouseover-overlay
+youtube.com##ytd-moving-thumbnail-renderer
+youtube.com##.ytp-cued-thumbnail-overlay
+youtube.com##.player-poster
+youtube.com##.ytp-ce-element
+youtube.com##.html5-endscreen
+youtube.com##.ytp-videowall-still
+youtube.com##.ytp-fullscreen-grid
+
+! --- 6. COMMENTS ---
+youtube.com##ytd-comments
+
+! --- 7. METRICS & ENGAGEMENT ---
+youtube.com##ytd-notification-topbar-button-renderer
+youtube.com##.badge-style-type-notification
+youtube.com##ytd-guide-entry-renderer #newness-dot
+youtube.com##ytd-video-meta-block span.ytd-video-meta-block:first-of-type
+youtube.com##ytd-watch-metadata #info-container span:has-text(views)
+youtube.com##ytd-watch-metadata #info-container span:has-text(view)
+youtube.com##yt-formatted-string#owner-sub-count
+youtube.com##yt-formatted-string#subscriber-count
+youtube.com##ytd-subscribe-button-renderer
+youtube.com##ytd-button-renderer:has-text(Try it free)
+youtube.com##ytd-button-renderer:has-text(Premium)
+youtube.com##segmented-like-dislike-button-view-model
+youtube.com##like-button-view-model
+youtube.com##dislike-button-view-model
+
+! --- 8. SEARCH AUTOCOMPLETE ---
+youtube.com##.ytSearchboxComponentSuggestionsContainer
