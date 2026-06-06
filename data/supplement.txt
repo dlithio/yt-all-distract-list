@@ -65,3 +65,25 @@ youtube.com##dislike-button-view-model
 
 ! --- 8. SEARCH AUTOCOMPLETE ---
 youtube.com##.ytSearchboxComponentSuggestionsContainer
+
+! --- 9. SUBSCRIPTIONS & MOBILE FEEDS (scoped; channels/search/playlists stay visible) ---
+youtube.com##ytd-browse[page-subtype="subscriptions"] #primary
+youtube.com##ytm-browse[page-subtype="home"] ytm-feed
+youtube.com##ytm-browse[page-subtype="subscriptions"] ytm-feed
+
+! --- 10. NAVIGATION CHROME (whole sidebar + mobile bottom bar) ---
+youtube.com##ytd-guide-renderer
+youtube.com##ytd-mini-guide-renderer
+youtube.com##ytm-pivot-bar-renderer
+
+! --- 11. WATCH RECOMMENDATIONS & COMMENTS (mobile) ---
+youtube.com##ytm-watch-next-secondary-results-renderer
+youtube.com##ytm-comments-section-renderer
+
+! --- 12. ADS & PROMOS ---
+youtube.com##ytd-display-ad-renderer
+youtube.com##ytd-ad-slot-renderer
+youtube.com##ytd-in-feed-ad-layout-renderer
+youtube.com##ytd-promoted-sparkles-web-renderer
+youtube.com##ytd-primetime-promo-renderer
+youtube.com##ytd-statement-banner-renderer
