@@ -108,3 +108,12 @@ def test_explosion_ceiling_flagged():
     rules = "\n".join(f"youtube.com##ytd-x{i}" for i in range(10))
     text = f"! Title: x\n! Expires: 1 day\n! Version: 1\n!\n{rules}\n"
     assert any("exceeds ceiling" in e for e in lint_text(text, set(), max_rules=5))
+
+
+def test_lint_guard_sets_mirror_extract():
+    # lint is an independent publish-gate backstop that hard-copies extract's guard
+    # sets; these must stay identical or the gate would miss what extract drops.
+    from lockedin_filters import extract, lint
+
+    assert lint.CONTENT_RENDERERS == extract.CONTENT_RENDERERS
+    assert lint.SEARCH_SURFACES == extract.SEARCH_SURFACES
