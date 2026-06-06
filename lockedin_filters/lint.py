@@ -23,7 +23,7 @@ PROTECTED = (
 # navigation, or takes the player/side-panel down with it. Matched against the EXACT
 # selector (not a substring) so scoped descendants like
 # `ytd-browse[page-subtype="home"] #primary` stay allowed. This is the publish-gate
-# backstop for extract.py's OVER_BROAD guard.
+# backstop for extract.py's OVER_BROAD_SHELLS guard.
 OVER_BROAD_SHELLS = frozenset({
     "ytd-app", "ytm-app",
     "ytd-browse", "ytm-browse",
