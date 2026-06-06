@@ -45,3 +45,14 @@ def test_published_selectors_reads_dist(tmp_path):
     pub = published_selectors(dist)
     assert "ytd-comments" in pub
     assert "ytd-x:has-text(Hi)" in pub   # canonicalized from the #?# twin
+
+
+def test_harvest_candidates_marks_selector_from_both_sources(tmp_path):
+    d = tmp_path / "up"
+    (d / "content").mkdir(parents=True)
+    (d / "content" / "index.js").write_text(
+        'a.textContent = `ytd-comments { display:none !important; }`;\n'  # css hide-block
+        "document.querySelector('ytd-comments');\n"                       # same selector as a string anchor
+    )
+    cands = {c["selector"]: c for c in harvest_candidates(d)}
+    assert cands["ytd-comments"]["sources"] == ["css", "string"]
