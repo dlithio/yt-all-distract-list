@@ -85,3 +85,12 @@ def test_render_markdown_has_counts_changes_and_warnings():
     assert "ytd-video-renderer" in md               # unblocked candidate listed
     assert "⚠" in md                                 # warning marker for the guarded candidate
     assert "ytd-reel-shelf-renderer" not in md.split("## Unblocked")[1]  # published -> not in unblocked list
+
+
+def test_render_markdown_first_run_shows_baseline_not_churn():
+    md = render_markdown(_annotated(), {"added": ["a", "b", "c"], "removed": []},
+                         build_date="2026.06.06", upstream_sha="x", first_run=True)
+    changes = md.split("## Changes since last run")[1].split("## Unblocked")[0]
+    assert "Baseline run" in changes
+    # the added selectors are NOT dumped as churn on the baseline run
+    assert "- `a`" not in changes

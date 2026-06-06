@@ -99,7 +99,8 @@ def _bucket(sources: list[str]) -> str:
     return "css" if "css" in sources else "string"
 
 
-def render_markdown(annotated: list[dict], diff: dict, *, build_date: str, upstream_sha: str) -> str:
+def render_markdown(annotated: list[dict], diff: dict, *, build_date: str, upstream_sha: str,
+                    first_run: bool = False) -> str:
     unblocked = [c for c in annotated if not c["published"]]
     total = len(annotated)
     pub = sum(1 for c in annotated if c["published"])
@@ -116,14 +117,20 @@ def render_markdown(annotated: list[dict], diff: dict, *, build_date: str, upstr
     out.append("")
     out.append("## Changes since last run")
     out.append("")
-    out.append("**New upstream selectors:**" if diff["added"] else "_No new selectors._")
-    for s in diff["added"]:
-        out.append(f"- `{s}`")
-    out.append("")
-    out.append("**Removed upstream selectors:**" if diff["removed"] else "_No removed selectors._")
-    for s in diff["removed"]:
-        out.append(f"- `{s}`")
-    out.append("")
+    if first_run:
+        # No prior candidates snapshot to diff against — listing everything as "new"
+        # would be noise, so record a baseline instead.
+        out.append(f"_Baseline run — {total} selectors recorded; future runs show only what changed._")
+        out.append("")
+    else:
+        out.append("**New upstream selectors:**" if diff["added"] else "_No new selectors._")
+        for s in diff["added"]:
+            out.append(f"- `{s}`")
+        out.append("")
+        out.append("**Removed upstream selectors:**" if diff["removed"] else "_No removed selectors._")
+        for s in diff["removed"]:
+            out.append(f"- `{s}`")
+        out.append("")
     out.append("## Unblocked candidates")
     out.append("")
     out.append(
@@ -167,8 +174,9 @@ def main(argv: list[str] | None = None) -> int:
 
     current = {c["selector"] for c in candidates}
     cand_path = Path(args.candidates)
+    first_run = not cand_path.exists()
     previous: set[str] = set()
-    if cand_path.exists():
+    if not first_run:
         try:
             previous = {c["selector"] for c in json.loads(cand_path.read_text(encoding="utf-8"))}
         except (ValueError, KeyError, TypeError):
@@ -177,8 +185,11 @@ def main(argv: list[str] | None = None) -> int:
 
     cand_path.parent.mkdir(parents=True, exist_ok=True)
     cand_path.write_text(render_json(annotated), encoding="utf-8")
-    Path(args.out).write_text(
-        render_markdown(annotated, diff, build_date=args.build_date, upstream_sha=args.upstream_sha),
+    out_path = Path(args.out)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(
+        render_markdown(annotated, diff, build_date=args.build_date,
+                        upstream_sha=args.upstream_sha, first_run=first_run),
         encoding="utf-8",
     )
     print(f"Wrote {args.candidates} and {args.out}: {len(annotated)} harvested, "
