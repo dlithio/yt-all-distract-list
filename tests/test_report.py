@@ -1,5 +1,6 @@
 from lockedin_filters.report import (
     harvest_candidates, annotate, diff_candidates, published_selectors,
+    render_json, render_markdown,
 )
 
 
@@ -56,3 +57,31 @@ def test_harvest_candidates_marks_selector_from_both_sources(tmp_path):
     )
     cands = {c["selector"]: c for c in harvest_candidates(d)}
     assert cands["ytd-comments"]["sources"] == ["css", "string"]
+
+
+def _annotated():
+    return [
+        {"selector": "ytd-reel-shelf-renderer", "sources": ["css"], "scoped": False,
+         "guard": None, "published": True, "in_supplement": False},
+        {"selector": "ytd-video-renderer", "sources": ["string"], "scoped": False,
+         "guard": "content_renderer", "published": False, "in_supplement": False},
+        {"selector": "ytd-cool-new-renderer", "sources": ["css"], "scoped": False,
+         "guard": None, "published": False, "in_supplement": False},
+    ]
+
+
+def test_render_json_is_valid_sorted_array():
+    import json
+    data = json.loads(render_json(_annotated()))
+    assert isinstance(data, list) and len(data) == 3
+    assert data[0]["selector"] == "ytd-reel-shelf-renderer"
+
+
+def test_render_markdown_has_counts_changes_and_warnings():
+    md = render_markdown(_annotated(), {"added": ["ytd-cool-new-renderer"], "removed": []},
+                         build_date="2026.06.06", upstream_sha="abc123")
+    assert "abc123" in md and "2026.06.06" in md
+    assert "ytd-cool-new-renderer" in md            # appears in "changes since last run"
+    assert "ytd-video-renderer" in md               # unblocked candidate listed
+    assert "⚠" in md                                 # warning marker for the guarded candidate
+    assert "ytd-reel-shelf-renderer" not in md.split("## Unblocked")[1]  # published -> not in unblocked list

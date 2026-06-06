@@ -5,10 +5,12 @@ Observability only — never gates publishing. Pure stdlib.
 """
 from __future__ import annotations
 
+import argparse
+import json
 from pathlib import Path
 
 from . import extract
-from .build import canonical_selector, selector_of
+from .build import canonical_selector, load_supplement_selectors, selector_of
 
 # A selector is "scoped" if it has structure beyond a single component name.
 _SCOPED_CHARS = set(" >[]:(),+~")
@@ -77,3 +79,112 @@ def published_selectors(dist_path: Path) -> set[str]:
         if sel:
             out.add(canonical_selector(sel))
     return out
+
+
+_GUARD_NOTE = {
+    "over_broad": "⚠ over-broad page shell — scope before adding",
+    "search_surface": "⚠ search surface — would break search",
+    "content_renderer": "⚠ shared content renderer — would blank search",
+    "protected": "⚠ protected element — do not hide",
+}
+
+
+def render_json(annotated: list[dict]) -> str:
+    return json.dumps(annotated, indent=2) + "\n"
+
+
+def _bucket(sources: list[str]) -> str:
+    if "css" in sources and "string" in sources:
+        return "both"
+    return "css" if "css" in sources else "string"
+
+
+def render_markdown(annotated: list[dict], diff: dict, *, build_date: str, upstream_sha: str) -> str:
+    unblocked = [c for c in annotated if not c["published"]]
+    total = len(annotated)
+    pub = sum(1 for c in annotated if c["published"])
+    insupp = sum(1 for c in annotated if c["in_supplement"])
+    out: list[str] = []
+    out.append("# Maintenance Report")
+    out.append("")
+    out.append(f"- Generated: {build_date}")
+    out.append(f"- Upstream commit: {upstream_sha}")
+    out.append(
+        f"- Harvested: {total} | published: {pub} | in supplement: {insupp} "
+        f"| unblocked candidates: {len(unblocked)}"
+    )
+    out.append("")
+    out.append("## Changes since last run")
+    out.append("")
+    out.append("**New upstream selectors:**" if diff["added"] else "_No new selectors._")
+    for s in diff["added"]:
+        out.append(f"- `{s}`")
+    out.append("")
+    out.append("**Removed upstream selectors:**" if diff["removed"] else "_No removed selectors._")
+    for s in diff["removed"]:
+        out.append(f"- `{s}`")
+    out.append("")
+    out.append("## Unblocked candidates")
+    out.append("")
+    out.append(
+        "Selectors the extension references that your list does NOT block. Add the ones "
+        "you want to `data/supplement.txt`. ⚠ marks over-broad/protected selectors — scope "
+        "them before adding or they may blank a page."
+    )
+    out.append("")
+    groups = (
+        ("css", "From real hide-CSS (usually safe to adopt)"),
+        ("both", "From both hide-CSS and query-anchors"),
+        ("string", "From query-anchors only (often over-broad — scope before adding)"),
+    )
+    for key, title in groups:
+        rows = [c for c in unblocked if _bucket(c["sources"]) == key]
+        if not rows:
+            continue
+        out.append(f"### {title}")
+        for c in rows:
+            note = _GUARD_NOTE.get(c["guard"], "")
+            out.append(f"- `{c['selector']}`" + (f"  {note}" if note else ""))
+        out.append("")
+    return "\n".join(out) + "\n"
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Generate the LockedIn YouTube maintenance report.")
+    parser.add_argument("--upstream", required=True)
+    parser.add_argument("--supplement", default="data/supplement.txt")
+    parser.add_argument("--dist", default="dist/lockedin-youtube.txt")
+    parser.add_argument("--candidates", default="data/candidates.json")
+    parser.add_argument("--out", default="data/MAINTENANCE.md")
+    parser.add_argument("--build-date", required=True)
+    parser.add_argument("--upstream-sha", default="unknown")
+    args = parser.parse_args(argv)
+
+    candidates = harvest_candidates(Path(args.upstream))
+    published = published_selectors(Path(args.dist))
+    supplement = load_supplement_selectors(args.supplement)
+    annotated = annotate(candidates, published, supplement)
+
+    current = {c["selector"] for c in candidates}
+    cand_path = Path(args.candidates)
+    previous: set[str] = set()
+    if cand_path.exists():
+        try:
+            previous = {c["selector"] for c in json.loads(cand_path.read_text(encoding="utf-8"))}
+        except (ValueError, KeyError, TypeError):
+            previous = set()
+    diff = diff_candidates(current, previous)
+
+    cand_path.parent.mkdir(parents=True, exist_ok=True)
+    cand_path.write_text(render_json(annotated), encoding="utf-8")
+    Path(args.out).write_text(
+        render_markdown(annotated, diff, build_date=args.build_date, upstream_sha=args.upstream_sha),
+        encoding="utf-8",
+    )
+    print(f"Wrote {args.candidates} and {args.out}: {len(annotated)} harvested, "
+          f"{sum(1 for c in annotated if not c['published'])} unblocked.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
