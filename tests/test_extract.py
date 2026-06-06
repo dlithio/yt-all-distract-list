@@ -1,4 +1,10 @@
-from lockedin_filters.extract import normalize_selector
+from lockedin_filters.extract import (
+    normalize_selector,
+    is_hide_block,
+    harvest_css_blocks,
+    harvest_string_selectors,
+    extract_selectors,
+)
 
 
 def test_normalize_accepts_youtube_component():
@@ -33,11 +39,6 @@ def test_normalize_keeps_view_model_components():
     assert normalize_selector("like-button-view-model") == "like-button-view-model"
 
 
-from lockedin_filters.extract import (
-    is_hide_block, harvest_css_blocks, harvest_string_selectors,
-)
-
-
 def test_is_hide_block_true_for_display_none():
     assert is_hide_block("display:none !important;") is True
 
@@ -58,9 +59,6 @@ def test_harvest_string_selectors_picks_yt_like_strings():
     assert "ytd-comments" in found
     assert "#related" in found
     assert "hello world" not in found
-
-
-from lockedin_filters.extract import extract_selectors
 
 
 def test_extract_selectors_integration(tmp_path):

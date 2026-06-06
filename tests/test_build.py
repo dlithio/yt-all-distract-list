@@ -1,7 +1,7 @@
 # tests/test_build.py
 from lockedin_filters.build import (
     selector_of, canonical_selector, emit_rule, collect_rules,
-    render, finalize, load_supplement_selectors, build,
+    render, finalize, load_supplement_selectors,
 )
 
 

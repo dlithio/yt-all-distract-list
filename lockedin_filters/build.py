@@ -85,7 +85,7 @@ def render(build_date: str, rules: list[str]) -> str:
 
 
 def _strip_version(text: str) -> str:
-    return "\n".join(l for l in text.splitlines() if not l.startswith("! Version:"))
+    return "\n".join(ln for ln in text.splitlines() if not ln.startswith("! Version:"))
 
 
 def finalize(new_text: str, old_text: str | None) -> str:

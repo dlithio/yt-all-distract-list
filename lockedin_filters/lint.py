@@ -42,7 +42,7 @@ def lint_text(text: str, supplement_selectors: set[str], max_rules: int = MAX_RU
         if not any(line.startswith(required) for line in lines):
             errors.append(f"missing header: {required}")
 
-    rule_lines = [l.strip() for l in lines if l.strip() and not l.strip().startswith("!")]
+    rule_lines = [ln.strip() for ln in lines if ln.strip() and not ln.strip().startswith("!")]
     seen: set[str] = set()
     for line in rule_lines:
         if not _VALID_PREFIX.match(line):
@@ -70,7 +70,7 @@ def lint_text(text: str, supplement_selectors: set[str], max_rules: int = MAX_RU
     if len(rule_lines) > max_rules:
         errors.append(f"rule count {len(rule_lines)} exceeds ceiling {max_rules}")
 
-    published = {canonical_selector(selector_of(l)) for l in rule_lines if selector_of(l)}
+    published = {canonical_selector(selector_of(ln)) for ln in rule_lines if selector_of(ln)}
     for sel in supplement_selectors:
         if canonical_selector(sel) not in published:
             errors.append(f"supplement floor violation, missing: {sel}")
