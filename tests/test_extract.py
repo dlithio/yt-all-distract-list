@@ -57,6 +57,25 @@ def test_normalize_protects_bare_search_surfaces_but_allows_scoped():
     assert normalize_selector("ytm-search ytm-shelf-renderer") == "ytm-search ytm-shelf-renderer"
 
 
+def test_normalize_protects_bare_content_renderers():
+    # Result cards / containers YouTube reuses on the search page must never become
+    # bare global hides (they would blank search results).
+    for r in ("ytd-video-renderer", "ytd-item-section-renderer", "ytd-grid-video-renderer",
+              "ytd-channel-renderer", "ytd-playlist-renderer", "ytd-playlist-video-renderer",
+              "yt-lockup-view-model", "ytd-continuation-item-renderer",
+              "ytm-item-section-renderer", "ytm-video-with-context-renderer",
+              "ytm-grid-video-renderer"):
+        assert normalize_selector(r) is None
+
+
+def test_normalize_allows_scoped_content_renderers():
+    # Scoped uses carry page context and stay allowed — e.g. stripping Shorts inside search.
+    assert normalize_selector('ytd-search ytd-video-renderer:has([href^="/shorts/"])') == \
+        'ytd-search ytd-video-renderer:has([href^="/shorts/"])'
+    assert normalize_selector('[page-subtype="search"] ytd-video-renderer:has([href^="/shorts/"])') == \
+        '[page-subtype="search"] ytd-video-renderer:has([href^="/shorts/"])'
+
+
 def test_normalize_rejects_bare_and_truncated_tokens():
     assert normalize_selector("ytd-") is None
     assert normalize_selector("yt-") is None

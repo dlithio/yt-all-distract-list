@@ -43,6 +43,21 @@ SEARCH_SURFACES = frozenset({
     "ytd-two-column-search-results-renderer",
 })
 
+# Content/result renderers YouTube REUSES across pages — including the search results
+# page. Their bare (unscoped) form must never become a global hide rule or it blanks
+# search. Matched against the EXACT normalized selector, so SCOPED uses (e.g.
+# `ytd-search ytd-video-renderer:has([href^="/shorts/"])`) are still allowed. Home and
+# subscriptions stay hidden via their page CONTAINERS (ytm-feed,
+# ytd-browse[page-subtype="home"] #primary, ytd-two-column-browse-results-renderer) —
+# hiding a container cascades to these children regardless of this guard.
+CONTENT_RENDERERS = frozenset({
+    "ytd-video-renderer", "ytd-item-section-renderer", "ytd-grid-video-renderer",
+    "ytd-channel-renderer", "ytd-playlist-renderer", "ytd-playlist-video-renderer",
+    "yt-lockup-view-model", "ytd-continuation-item-renderer",
+    "ytm-item-section-renderer", "ytm-video-with-context-renderer",
+    "ytm-grid-video-renderer",
+})
+
 # Declarations that mean "hide" (we want these blocks).
 HIDE_DECLS = ("display:none", "visibility:hidden", "opacity:0", "max-height:0")
 
@@ -83,7 +98,7 @@ def normalize_selector(selector: str) -> str | None:
     # in from a `tagName.startsWith('ytd-')` probe — these are not real elements.
     if sel in YT_TOKENS or sel.endswith("-"):
         return None
-    if sel in OVER_BROAD or sel in SEARCH_SURFACES:
+    if sel in OVER_BROAD or sel in SEARCH_SURFACES or sel in CONTENT_RENDERERS:
         return None
     low = sel.lower()
     if any(p.lower() in low for p in PROTECTED_SUBSTRINGS):
