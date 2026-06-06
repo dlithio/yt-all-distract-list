@@ -84,6 +84,14 @@ def test_bare_search_surface_flagged_but_scoped_search_cleanup_ok():
     assert not any("protected search surface" in e for e in lint_text(ok, set()))
 
 
+def test_bare_content_renderer_flagged_but_scoped_ok():
+    bad = "! Title: x\n! Expires: 1 day\n! Version: 1\n!\nyoutube.com##ytd-video-renderer\n"
+    assert any("shared content renderer" in e for e in lint_text(bad, set()))
+    ok = ("! Title: x\n! Expires: 1 day\n! Version: 1\n!\n"
+          'youtube.com##ytd-search ytd-video-renderer:has([href^="/shorts/"])\n')
+    assert not any("shared content renderer" in e for e in lint_text(ok, set()))
+
+
 def test_allowlist_marker_rejected_as_invalid_prefix():
     # `#@#` un-hide lines must not be accepted (would be re-emitted as hides).
     text = "! Title: x\n! Expires: 1 day\n! Version: 1\n!\nyoutube.com#@#ytd-comments\n"

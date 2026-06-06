@@ -41,6 +41,18 @@ SEARCH_SURFACES = frozenset({
     "ytd-two-column-search-results-renderer",
 })
 
+# Content/result renderers reused on the search page. Their bare form must never be a
+# global hide (it blanks search results). EXACT match, so scoped rules like
+# `ytd-search ytd-video-renderer:has(...)` stay allowed. Publish-gate backstop for
+# extract.py's CONTENT_RENDERERS guard.
+CONTENT_RENDERERS = frozenset({
+    "ytd-video-renderer", "ytd-item-section-renderer", "ytd-grid-video-renderer",
+    "ytd-channel-renderer", "ytd-playlist-renderer", "ytd-playlist-video-renderer",
+    "yt-lockup-view-model", "ytd-continuation-item-renderer",
+    "ytm-item-section-renderer", "ytm-video-with-context-renderer",
+    "ytm-grid-video-renderer",
+})
+
 # Only HIDE markers are valid: `##` and `#?#`. Allowlist markers (`#@#`/`#@?#`) are
 # rejected as invalid prefixes — see build._RULE_RE for the rationale.
 _VALID_PREFIX = re.compile(r"^youtube\.com#\??#")
@@ -90,6 +102,8 @@ def lint_text(text: str, supplement_selectors: set[str], max_rules: int = MAX_RU
             errors.append(f"targets over-broad page shell: {line}")
         if sel in SEARCH_SURFACES:
             errors.append(f"targets protected search surface: {line}")
+        if sel in CONTENT_RENDERERS:
+            errors.append(f"targets shared content renderer (would hide search results): {line}")
         if references_ask(sel):
             errors.append(f"targets protected 'Ask' button: {line}")
         if line in seen:
