@@ -36,6 +36,38 @@ def test_normalize_rejects_protected_mobile_panels():
     assert normalize_selector("ytm-transcript-segment-list-renderer") is None
 
 
+def test_normalize_rejects_over_broad_shells():
+    # App/page/nav shells wrap the player + protected panels; harvested from the
+    # extension's querySelector() detection probes, never hide-intents.
+    for shell in ("ytd-app", "ytm-app", "ytd-browse", "ytm-browse",
+                  "ytd-watch-flexy", "ytm-watch", "ytd-page-manager"):
+        assert normalize_selector(shell) is None
+    # ...but a scoped descendant of the same container is still allowed.
+    assert normalize_selector('ytd-browse[page-subtype="home"] #primary') == \
+        'ytd-browse[page-subtype="home"] #primary'
+
+
+def test_normalize_rejects_bare_and_truncated_tokens():
+    assert normalize_selector("ytd-") is None
+    assert normalize_selector("yt-") is None
+    assert normalize_selector("ytm-") is None
+
+
+def test_normalize_rejects_js_event_name_strings():
+    assert normalize_selector("yt-navigate-finish") is None
+    assert normalize_selector("yt-page-data-updated") is None
+
+
+def test_harvest_css_blocks_strips_leading_comment():
+    js = ('x.textContent = `/* Hide Shorts tab in sidebar */ '
+          'ytd-guide-entry-renderer:has(a[href="/shorts"]) { display:none !important; }`;')
+    blocks = harvest_css_blocks(js)
+    assert len(blocks) == 1
+    sel_part, _decl = blocks[0]
+    assert "/*" not in sel_part and "*/" not in sel_part
+    assert normalize_selector(sel_part) == 'ytd-guide-entry-renderer:has(a[href="/shorts"])'
+
+
 def test_normalize_rejects_over_broad_generic():
     assert normalize_selector("img") is None
     assert normalize_selector("#primary") is None

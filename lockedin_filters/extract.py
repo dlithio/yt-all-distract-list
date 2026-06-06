@@ -17,6 +17,21 @@ YT_TOKENS = (
     "#movie_player", "#secondary", "#related", "#comments", "#chat",
 )
 
+# Over-broad page/app/nav shells that contain the player, the protected side panels,
+# and/or core navigation. Harvested from the extension's detection probes
+# (`document.querySelector('ytd-app')` etc.), never from hide-intents — hiding any of
+# these would blank the whole app, break navigation, or take the video down with it.
+# Also includes JS event-name strings that look selector-ish but match no element.
+# Matched against the *exact* normalized selector, so scoped descendants like
+# `ytd-browse[page-subtype="home"] #primary` are unaffected.
+OVER_BROAD = frozenset({
+    "ytd-app", "ytm-app",
+    "ytd-browse", "ytm-browse",
+    "ytd-watch-flexy", "ytm-watch",
+    "ytd-page-manager",
+    "yt-navigate-finish", "yt-page-data-updated", "yt-page-type-changed",
+})
+
 # Declarations that mean "hide" (we want these blocks).
 HIDE_DECLS = ("display:none", "visibility:hidden", "opacity:0", "max-height:0")
 
@@ -38,18 +53,26 @@ PROTECTED_SUBSTRINGS = (
 _ANCESTOR = re.compile(r"html\[data-lockedin-[^\]]*\]\s*")
 _NOT_GUARD = re.compile(r":not\(\[data-lockedin-[^\]]*\]\)")
 _ATTR_GUARD = re.compile(r"\[data-lockedin-[^\]]*\]")
+_CSS_COMMENT = re.compile(r"/\*.*?\*/", re.DOTALL)
 _WS = re.compile(r"\s+")
 
 
 def normalize_selector(selector: str) -> str | None:
     """Clean one harvested selector. Return the normalized selector, or None if it
-    should be skipped (protected, over-broad, or empty)."""
+    should be skipped (protected, over-broad, malformed, or empty)."""
     sel = selector.strip()
+    sel = _CSS_COMMENT.sub(" ", sel)
     sel = _ANCESTOR.sub("", sel)
     sel = _NOT_GUARD.sub("", sel)
     sel = _ATTR_GUARD.sub("", sel)
     sel = _WS.sub(" ", sel).strip()
     if not sel:
+        return None
+    # Reject bare/truncated token fragments like `ytd-` or a lone `yt-` that slipped
+    # in from a `tagName.startsWith('ytd-')` probe — these are not real elements.
+    if sel in YT_TOKENS or sel.endswith("-"):
+        return None
+    if sel in OVER_BROAD:
         return None
     low = sel.lower()
     if any(p.lower() in low for p in PROTECTED_SUBSTRINGS):
@@ -78,6 +101,9 @@ def harvest_css_blocks(js_text: str) -> list[tuple[str, str]]:
     for literal in _TEMPLATE_LITERAL.findall(js_text):
         if "{" not in literal:
             continue
+        # Drop CSS comments first so their text (which can contain commas) never leaks
+        # into the captured selector list.
+        literal = _CSS_COMMENT.sub(" ", literal)
         for sel_part, decl in _CSS_RULE.findall(literal):
             blocks.append((sel_part, decl))
     return blocks

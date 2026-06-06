@@ -19,6 +19,18 @@ PROTECTED = (
     "ytm-engagement-panel-section-list-renderer", "ytm-transcript-segment-list-renderer",
 )
 
+# Over-broad page/app/nav shells. Hiding any of these blanks the whole app, breaks
+# navigation, or takes the player/side-panel down with it. Matched against the EXACT
+# selector (not a substring) so scoped descendants like
+# `ytd-browse[page-subtype="home"] #primary` stay allowed. This is the publish-gate
+# backstop for extract.py's OVER_BROAD guard.
+OVER_BROAD_SHELLS = frozenset({
+    "ytd-app", "ytm-app",
+    "ytd-browse", "ytm-browse",
+    "ytd-watch-flexy", "ytm-watch",
+    "ytd-page-manager",
+})
+
 _VALID_PREFIX = re.compile(r"^youtube\.com#@?\??#")
 _CONTAINS_ARG = re.compile(r":contains\((.*?)\)")
 _TEXT_OR_ARIA = re.compile(r":has-text\((.*?)\)|:contains\((.*?)\)|\[aria-label[^\]]*\]")
@@ -62,6 +74,8 @@ def lint_text(text: str, supplement_selectors: set[str], max_rules: int = MAX_RU
         low = sel.lower()
         if any(p.lower() in low for p in PROTECTED):
             errors.append(f"targets protected element: {line}")
+        if sel in OVER_BROAD_SHELLS:
+            errors.append(f"targets over-broad page shell: {line}")
         if references_ask(sel):
             errors.append(f"targets protected 'Ask' button: {line}")
         if line in seen:

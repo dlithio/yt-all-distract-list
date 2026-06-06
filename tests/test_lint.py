@@ -68,6 +68,14 @@ def test_protected_mobile_engagement_panel_flagged():
     assert any("protected element" in e for e in lint_text(text, set()))
 
 
+def test_over_broad_shell_flagged_but_scoped_descendant_ok():
+    bad = "! Title: x\n! Expires: 1 day\n! Version: 1\n!\nyoutube.com##ytd-app\n"
+    assert any("over-broad page shell" in e for e in lint_text(bad, set()))
+    ok = ('! Title: x\n! Expires: 1 day\n! Version: 1\n!\n'
+          'youtube.com##ytd-browse[page-subtype="home"] #primary\n')
+    assert not any("over-broad page shell" in e for e in lint_text(ok, set()))
+
+
 def test_supplement_floor_violation_flagged():
     text = "! Title: x\n! Expires: 1 day\n! Version: 1\n!\nyoutube.com##ytd-comments\n"
     errors = lint_text(text, {"ytd-comments", "ytd-missing"})
