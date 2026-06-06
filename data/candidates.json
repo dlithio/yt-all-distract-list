@@ -1,0 +1,3073 @@
+[
+  {
+    "selector": "#primary > .ytd-two-column-search-results-renderer ytd-horizontal-card-list-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#primary > .ytd-two-column-search-results-renderer ytd-shelf-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#related yt-chip-cloud-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#related yt-lockup-view-model",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#related yt-related-chip-cloud-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#related ytd-compact-autoplay-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#related ytd-compact-movie-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#related ytd-compact-radio-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#related ytd-compact-video-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#related ytd-compact-video-renderer:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#related ytd-continuation-item-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": "protected",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "#related ytd-feed-filter-chip-bar-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#related ytd-item-section-renderer > #contents",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#related ytd-item-section-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": "protected",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "#related ytd-reel-item-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#related ytd-reel-shelf-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#related ytd-video-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary #items",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary #related:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": "protected",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary yt-chip-cloud-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary yt-related-chip-cloud-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary ytd-compact-autoplay-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary ytd-compact-movie-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary ytd-compact-radio-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary ytd-compact-video-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary ytd-compact-video-renderer:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary ytd-continuation-item-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": "protected",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary ytd-feed-filter-chip-bar-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary ytd-item-section-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": "protected",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary ytd-playlist-panel-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary ytd-reel-item-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary ytd-video-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary ytd-watch-next-secondary-results-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": "protected",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "#secondary-inner",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".button-container ytd-button-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".yt-core-image",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".yt-lockup-view-model-wiz__content-image",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytd-display-ad-renderer #media-container",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytm-autonav-bar",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytm-autonav-toggle-button-container",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytm-autonav-toggle-button-container button",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytm-upnext-autoplay-container",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-autonav-endscreen",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-autonav-endscreen-countdown",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-autonav-endscreen-upnext-button",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-autonav-endscreen-upnext-container",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-autonav-toggle-button",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-autonav-toggle-button-bg",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-autonav-toggle-button-cancel",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-autonav-toggle-button-container",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-autonav-toggle-button-container button",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-autonav-toggle-button-visible",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-autonav-toggle-tooltip",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-ce-channel",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-ce-covering-overlay",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-ce-element",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": ".ytp-ce-element-show",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-ce-playlist",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-ce-shadow",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-ce-size-1280",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-ce-size-853",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-ce-video",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-ce-website",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-chrome-bottom [aria-label*=\"Autoplay\" i]",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-chrome-bottom [data-tooltip*=\"Autoplay\" i]",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-chrome-controls [aria-label*=\"Autoplay\" i]",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-chrome-controls [data-tooltip*=\"Autoplay\" i]",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-endscreen-content",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-endscreen-next",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-endscreen-previous",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-modern-videowall-still-image",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-next-button",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-prev-button",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-show-tiles",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-suggestion-set",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-time-duration",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-upnext",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-upnext-autoplay-icon",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-upnext-container",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-videowall-still",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": ".ytp-videowall-still-image",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "[page-subtype=\"search\"] grid-shelf-view-model",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "[page-subtype=\"search\"] ytd-horizontal-card-list-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "[page-subtype=\"search\"] ytd-reel-shelf-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "[page-subtype=\"search\"] ytd-rich-section-renderer:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "[page-subtype=\"search\"] ytd-rich-shelf-renderer:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "[page-subtype=\"search\"] ytd-shelf-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "[page-subtype=\"search\"] ytd-video-renderer:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "[page-subtype=\"search\"] ytd-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style=\"SHORTS\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "button.ytp-autonav-toggle-button",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "grid-shelf-view-model",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "grid-shelf-view-model:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "more-from-yt-spacer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "tp-yt-paper-tab:has(a[href=\"/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "tp-yt-paper-tab:has(a[href^=\"/home\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "tp-yt-paper-tab:has(a[href^=\"/shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "tp-yt-paper-tab:has(a[title=\"Home\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "tp-yt-paper-tab:has(a[title=\"Shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "tp-yt-paper-tab:has(div[title*=\"Shorts\" i])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "tp-yt-paper-tab:has(div[title=\"Home\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-badge-view-model",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-chip-cloud-chip-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-chip-cloud-chip-renderer:has([aria-label*=\"Short\" i])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-chip-cloud-chip-renderer:has([title*=\"Short\" i])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-chip-cloud-chip-renderer:has(a[href=\"/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-chip-cloud-chip-renderer:has(a[href^=\"/home\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-chip-cloud-chip-renderer:has(a[href^=\"/shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-chip-cloud-chip-renderer:has(a[title=\"Home\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-chip-cloud-chip-renderer:has(a[title=\"Shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-chip-cloud-chip-renderer:has(div[title*=\"Shorts\" i])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-chip-cloud-chip-renderer:has(div[title=\"Home\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-lockup-view-model",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "content_renderer",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-lockup-view-model:not(:hover) .yt-lockup-view-model-wiz__content-image",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-lockup-view-model:not(:hover) yt-thumbnail-view-model",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-tab-shape:has(a[href=\"/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-tab-shape:has(a[href^=\"/home\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-tab-shape:has(a[href^=\"/shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-tab-shape:has(a[title=\"Shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-thumbnail-view-model",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-thumbnail-view-model img",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-app",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "over_broad",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-backstage-post-thread-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-brand-video-singleton-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-browse[page-subtype=\"home\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-channel-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "content_renderer",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-chips-shelf-with-video-shelf-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-comments",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytd-comments#comments",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-comments-entry-point-header-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-compact-autoplay-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-compact-movie-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-compact-radio-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-compact-video-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-compact-video-renderer:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-compact-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style=\"SHORTS\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-compact-video-renderer:not(:hover) ytd-thumbnail",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-compact-video-renderer[is-shorts]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-continuation-item-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "content_renderer",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-display-ad-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytd-engagement-panel-section-list-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "protected",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-expanded-shelf-contents-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-feed-filter-chip-bar-renderer tp-yt-paper-tab:has(a[href=\"/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-feed-filter-chip-bar-renderer tp-yt-paper-tab:has(a[href^=\"/shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-feed-filter-chip-bar-renderer yt-chip-cloud-chip-renderer:has(a[href=\"/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-feed-filter-chip-bar-renderer yt-chip-cloud-chip-renderer:has(a[href^=\"/shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-grid-video-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "content_renderer",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-grid-video-renderer:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-grid-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style=\"SHORTS\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-collapsible-entry-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytd-guide-entry-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer #endpoint[title=\"Home\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer #endpoint[title=\"Shorts\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer a[href=\"/\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer a[href=\"/home\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer a[href=\"/shorts\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer a[href^=\"/shorts\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer a[title=\"Home\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer a[title=\"Shorts\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer:has(#endpoint[href^=\"/@\"])",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer:has(#endpoint[href^=\"/c/\"])",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer:has(#endpoint[href^=\"/channel/\"])",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer:has(#endpoint[title=\"Home\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer:has(#endpoint[title=\"Shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer:has(a[href=\"/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer:has(a[href=\"/home\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer:has(a[href=\"/shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer:has(a[href^=\"/shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer:has(a[title=\"Home\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-entry-renderer:has(a[title=\"Shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytd-guide-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytd-guide-section-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-guide-section-renderer:has(a#endpoint[href^=\"/feed/subscriptions\"])",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-horizontal-card-list-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-item-section-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "content_renderer",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-item-section-renderer > #contents",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-item-section-renderer.ytd-watch-next-secondary-results-renderer > #contents",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-logo",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer #endpoint[title=\"Home\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer #endpoint[title=\"Shorts\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer a[href=\"/\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer a[href=\"/home\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer a[href=\"/shorts\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer a[href^=\"/shorts\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer a[title=\"Home\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer a[title=\"Shorts\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer:has(#endpoint[title=\"Home\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer:has(#endpoint[title=\"Shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer:has(a[href=\"/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer:has(a[href=\"/home\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer:has(a[href=\"/shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer:has(a[href^=\"/shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer:has(a[title=\"Home\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-mini-guide-entry-renderer:has(a[title=\"Shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytd-mini-guide-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytd-playlist-panel-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-playlist-panel-view-model",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-playlist-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "content_renderer",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-playlist-thumbnail",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-playlist-thumbnail img",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytd-playlist-video-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "content_renderer",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-primetime-promo-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytd-promoted-sparkles-web-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytd-reel-item-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-reel-shelf-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-grid-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-grid-row",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-item-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-item-renderer:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-item-renderer:has(ytd-backstage-post-thread-renderer)",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-item-renderer:has(ytd-post-renderer)",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-item-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style=\"SHORTS\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-item-renderer:not(:hover) ytd-thumbnail",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-item-renderer[is-post]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-item-renderer[is-shelf-item]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-item-renderer[lockup]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-section-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-section-renderer:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-section-renderer:has(ytd-rich-item-renderer[is-post])",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-shelf-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-shelf-renderer:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-shelf-renderer[has-expansion-button][restrict-contents-overflow]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-search grid-shelf-view-model",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-search ytd-horizontal-card-list-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-search ytd-reel-shelf-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-search ytd-rich-section-renderer:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-search ytd-rich-shelf-renderer:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-search ytd-shelf-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-search ytd-video-renderer:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-search ytd-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style=\"SHORTS\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-shelf-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-statement-banner-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytd-thumbnail",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-thumbnail img",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytd-thumbnail-overlay-time-status-renderer[overlay-style=\"SHORTS\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-transcript-segment-list-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "protected",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-two-column-browse-results-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-two-column-browse-results-renderer #primary",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-two-column-search-results-renderer ytd-horizontal-card-list-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-two-column-search-results-renderer ytd-shelf-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-video-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "content_renderer",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-video-renderer:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style=\"SHORTS\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-video-renderer:not(:hover) ytd-thumbnail",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-watch-flexy[is-two-columns_] #secondary",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-watch-next-secondary-results-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-watch-next-secondary-results-renderer yt-chip-cloud-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-watch-next-secondary-results-renderer yt-lockup-view-model",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-watch-next-secondary-results-renderer yt-related-chip-cloud-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-watch-next-secondary-results-renderer ytd-compact-autoplay-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-watch-next-secondary-results-renderer ytd-compact-movie-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-watch-next-secondary-results-renderer ytd-compact-radio-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-watch-next-secondary-results-renderer ytd-compact-video-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-watch-next-secondary-results-renderer ytd-continuation-item-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": "protected",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-watch-next-secondary-results-renderer ytd-feed-filter-chip-bar-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-watch-next-secondary-results-renderer ytd-item-section-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": "protected",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-watch-next-secondary-results-renderer ytd-reel-item-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-watch-next-secondary-results-renderer ytd-reel-shelf-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-watch-next-secondary-results-renderer ytd-video-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-app",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "over_broad",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-backstage-post-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-browse",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "over_broad",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-comment-thread-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-comments-entry-point-header-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-comments-section-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytm-compact-autoplay-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-compact-video-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-engagement-panel-section-list-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "protected",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-feed",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-grid-video-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "content_renderer",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-horizontal-card-list-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-item-section-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "content_renderer",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-item-section-renderer:has(ytm-backstage-post-renderer)",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-item-section-renderer:has(ytm-post-renderer)",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-item-section-renderer[section-identifier=\"related-items\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-pivot-bar-item-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-pivot-bar-item-renderer a[href=\"/shorts\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-pivot-bar-item-renderer:has([data-pivot-id=\"shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-pivot-bar-item-renderer:has([href=\"/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-pivot-bar-item-renderer:has([href=\"/home\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-pivot-bar-item-renderer:has([href=\"/shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-pivot-bar-item-renderer:has([href^=\"/shorts\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-pivot-bar-renderer a[title=\"Shorts\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-playlist-panel-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-playlist-thumbnail",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-post-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-reel-item-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-reel-item-renderer .video-thumbnail-container-vertical",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-reel-shelf-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytm-rich-grid-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-rich-item-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-rich-item-renderer:has(ytm-post-renderer)",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-rich-shelf-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-search ytm-horizontal-card-list-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-search ytm-shelf-renderer",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-shelf-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-shorts-lockup-view-model",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-shorts-lockup-view-model-v2",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-structured-description-content-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-thumbnail",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-thumbnail img",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-video-with-context-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "content_renderer",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-watch",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "over_broad",
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-watch-next-secondary-results-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  }
+]

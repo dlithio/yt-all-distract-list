@@ -24,12 +24,20 @@ jobs:
               --snapshot data/upstream-selectors.snapshot.json
       - name: Lint gate (no publish on failure)
         run: uv run python -m lockedin_filters.lint dist/lockedin-youtube.txt --supplement data/supplement.txt
+      - name: Maintenance report
+        run: |
+          uv run python -m lockedin_filters.report \
+            --upstream upstream --supplement data/supplement.txt \
+            --dist dist/lockedin-youtube.txt \
+            --candidates data/candidates.json --out data/MAINTENANCE.md \
+            --build-date "$(date -u +%Y.%m.%d)" \
+            --upstream-sha "$(git -C upstream rev-parse HEAD)"
       - name: Commit if changed
         run: |
           if [[ -n "$(git status --porcelain dist data)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add dist/lockedin-youtube.txt data/upstream-selectors.snapshot.json
+            git add dist/lockedin-youtube.txt data/upstream-selectors.snapshot.json data/candidates.json data/MAINTENANCE.md
             git commit -m "chore: daily sync $(date -u +%Y-%m-%d)"
             git push
           else
