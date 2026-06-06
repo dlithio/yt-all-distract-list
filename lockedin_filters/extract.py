@@ -21,14 +21,18 @@ YT_TOKENS = (
 # and/or core navigation. Harvested from the extension's detection probes
 # (`document.querySelector('ytd-app')` etc.), never from hide-intents — hiding any of
 # these would blank the whole app, break navigation, or take the video down with it.
-# Also includes JS event-name strings that look selector-ish but match no element.
 # Matched against the *exact* normalized selector, so scoped descendants like
 # `ytd-browse[page-subtype="home"] #primary` are unaffected.
-OVER_BROAD = frozenset({
+OVER_BROAD_SHELLS = frozenset({
     "ytd-app", "ytm-app",
     "ytd-browse", "ytm-browse",
     "ytd-watch-flexy", "ytm-watch",
     "ytd-page-manager",
+})
+
+# JS identifiers / event names that look selector-ish (they contain a YT token) but
+# match no DOM element — pure noise from addEventListener/querystring scans.
+_JUNK_IDENTIFIERS = frozenset({
     "yt-navigate-finish", "yt-page-data-updated", "yt-page-type-changed",
 })
 
@@ -83,9 +87,11 @@ _CSS_COMMENT = re.compile(r"/\*.*?\*/", re.DOTALL)
 _WS = re.compile(r"\s+")
 
 
-def normalize_selector(selector: str) -> str | None:
-    """Clean one harvested selector. Return the normalized selector, or None if it
-    should be skipped (protected, over-broad, malformed, or empty)."""
+def clean_selector(selector: str) -> str | None:
+    """Clean a harvested selector to its normalized form, or None if it is not a usable
+    YouTube selector (empty, a junk JS identifier, a bare/truncated token, or non-YT).
+
+    Cleaning ONLY — it applies no hide/keep policy. Use guard_reason() for policy."""
     sel = selector.strip()
     sel = _CSS_COMMENT.sub(" ", sel)
     sel = _ANCESTOR.sub("", sel)
@@ -94,16 +100,38 @@ def normalize_selector(selector: str) -> str | None:
     sel = _WS.sub(" ", sel).strip()
     if not sel:
         return None
-    # Reject bare/truncated token fragments like `ytd-` or a lone `yt-` that slipped
-    # in from a `tagName.startsWith('ytd-')` probe — these are not real elements.
+    if sel in _JUNK_IDENTIFIERS:
+        return None
+    # Reject bare/truncated token fragments like `ytd-` or a lone `yt-` that slipped in
+    # from a `tagName.startsWith('ytd-')` probe — these are not real elements.
     if sel in YT_TOKENS or sel.endswith("-"):
         return None
-    if sel in OVER_BROAD or sel in SEARCH_SURFACES or sel in CONTENT_RENDERERS:
+    if not any(tok in sel for tok in YT_TOKENS):
         return None
+    return sel
+
+
+def guard_reason(sel: str) -> str | None:
+    """Why a cleaned selector must NOT be published as a hide rule, or None if it is safe.
+
+    Returns one of: 'over_broad', 'search_surface', 'content_renderer', 'protected'."""
+    if sel in OVER_BROAD_SHELLS:
+        return "over_broad"
+    if sel in SEARCH_SURFACES:
+        return "search_surface"
+    if sel in CONTENT_RENDERERS:
+        return "content_renderer"
     low = sel.lower()
     if any(p.lower() in low for p in PROTECTED_SUBSTRINGS):
-        return None
-    if not any(tok in sel for tok in YT_TOKENS):
+        return "protected"
+    return None
+
+
+def normalize_selector(selector: str) -> str | None:
+    """Clean one harvested selector and apply publish policy. Return the normalized
+    selector, or None if it should be skipped (junk, over-broad, protected, etc.)."""
+    sel = clean_selector(selector)
+    if sel is None or guard_reason(sel) is not None:
         return None
     return sel
 

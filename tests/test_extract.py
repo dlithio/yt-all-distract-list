@@ -4,6 +4,8 @@ from lockedin_filters.extract import (
     harvest_css_blocks,
     harvest_string_selectors,
     extract_selectors,
+    clean_selector,
+    guard_reason,
 )
 
 
@@ -144,3 +146,25 @@ def test_extract_selectors_integration(tmp_path):
     assert "#movie_player" not in result
     assert ".keep" not in result
     assert "img" not in result
+
+
+def test_clean_selector_keeps_policy_selectors_but_drops_junk():
+    # cleaning does NOT apply hide/keep policy — over-broad/guarded selectors survive cleaning
+    assert clean_selector("ytd-app") == "ytd-app"
+    assert clean_selector("ytd-video-renderer") == "ytd-video-renderer"
+    # junk / non-selectors are dropped
+    assert clean_selector("yt-navigate-finish") is None      # JS event name
+    assert clean_selector("ytd-") is None                    # truncated token
+    assert clean_selector("yt-") is None                     # bare token
+    assert clean_selector("div") is None                     # non-YouTube
+    assert clean_selector("   ") is None                     # empty
+    # cleaning still strips lockedin guards + comments
+    assert clean_selector('html[data-lockedin-x] ytd-comments:not([data-lockedin-hidden])') == "ytd-comments"
+
+
+def test_guard_reason_labels_each_policy_set():
+    assert guard_reason("ytd-app") == "over_broad"
+    assert guard_reason("ytd-search") == "search_surface"
+    assert guard_reason("ytd-video-renderer") == "content_renderer"
+    assert guard_reason("#movie_player") == "protected"
+    assert guard_reason("ytd-comments") is None

@@ -117,3 +117,4 @@ def test_lint_guard_sets_mirror_extract():
 
     assert lint.CONTENT_RENDERERS == extract.CONTENT_RENDERERS
     assert lint.SEARCH_SURFACES == extract.SEARCH_SURFACES
+    assert lint.OVER_BROAD_SHELLS == extract.OVER_BROAD_SHELLS
