@@ -189,7 +189,13 @@ def iter_js_files(upstream_dir: Path) -> list[Path]:
 
 
 def extract_selectors(upstream_dir: Path) -> set[str]:
-    """Harvest and normalize all hide-selectors from the upstream clone."""
+    """Harvest and normalize hide-selectors from the upstream clone.
+
+    Only selectors from the extension's real CSS hide-blocks (`display:none {…}`) are
+    published — these carry genuine, well-scoped hide intent. Selectors that appear only
+    as querySelector/closest string ANCHORS are deliberately NOT published (they are
+    over-broad and blank whole pages); report.py surfaces them as maintenance candidates.
+    """
     selectors: set[str] = set()
     for path in iter_js_files(upstream_dir):
         text = path.read_text(encoding="utf-8", errors="ignore")
@@ -197,11 +203,6 @@ def extract_selectors(upstream_dir: Path) -> set[str]:
             if not is_hide_block(decl):
                 continue
             for piece in sel_part.split(","):
-                norm = normalize_selector(piece)
-                if norm:
-                    selectors.add(norm)
-        for raw in harvest_string_selectors(text):
-            for piece in raw.split(","):
                 norm = normalize_selector(piece)
                 if norm:
                     selectors.add(norm)

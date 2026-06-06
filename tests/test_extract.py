@@ -131,21 +131,23 @@ def test_harvest_string_selectors_picks_yt_like_strings():
     assert "hello world" not in found
 
 
-def test_extract_selectors_integration(tmp_path):
+def test_extract_selectors_publishes_css_hides_only(tmp_path):
     content = tmp_path / "content"
     content.mkdir()
     (content / "index.js").write_text(
-        'x.textContent = `ytd-reel-shelf-renderer { display:none !important; }`;\n'
-        'y.textContent = `#movie_player { filter:none !important; }`;\n'   # protected -> skipped
-        'z.textContent = `.keep { visibility:visible !important; }`;\n'    # restore -> skipped
-        "const s = 'ytd-comments'; toggle('img');\n"                       # img -> over-broad skip
+        'x.textContent = `ytd-reel-shelf-renderer { display:none !important; }`;\n'   # real hide-CSS
+        'y.textContent = `#movie_player { filter:none !important; }`;\n'              # protected -> skipped
+        'z.textContent = `.keep { visibility:visible !important; }`;\n'              # restore -> skipped
+        "const s = 'ytd-comments'; toggle('img');\n"                                 # string anchors -> NOT published
+        "document.querySelector('ytd-video-renderer');\n"                            # string anchor -> NOT published
     )
     result = extract_selectors(content)
-    assert "ytd-reel-shelf-renderer" in result
-    assert "ytd-comments" in result
-    assert "#movie_player" not in result
-    assert ".keep" not in result
-    assert "img" not in result
+    assert "ytd-reel-shelf-renderer" in result      # published: from real hide-CSS
+    assert "ytd-comments" not in result             # string anchor only -> not published
+    assert "ytd-video-renderer" not in result       # string anchor only -> not published
+    assert "#movie_player" not in result            # protected
+    assert ".keep" not in result                    # restore block
+    assert "img" not in result                      # non-YouTube
 
 
 def test_clean_selector_keeps_policy_selectors_but_drops_junk():
