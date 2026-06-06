@@ -94,3 +94,34 @@ def harvest_string_selectors(js_text: str) -> list[str]:
         if _looks_like_selector(value):
             out.append(value)
     return out
+
+
+def iter_js_files(upstream_dir: Path) -> list[Path]:
+    """All .js files under the upstream clone, sorted for determinism.
+
+    We scan every .js file (not just manifest content_scripts) so that imported
+    modules like shared/selectors.js are covered and the extractor is resilient to
+    upstream file renames/additions. The over-broad guard in normalize_selector keeps
+    non-YouTube selectors (e.g. the extension's settings popup) out of the result.
+    """
+    return sorted(upstream_dir.rglob("*.js"))
+
+
+def extract_selectors(upstream_dir: Path) -> set[str]:
+    """Harvest and normalize all hide-selectors from the upstream clone."""
+    selectors: set[str] = set()
+    for path in iter_js_files(upstream_dir):
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        for sel_part, decl in harvest_css_blocks(text):
+            if not is_hide_block(decl):
+                continue
+            for piece in sel_part.split(","):
+                norm = normalize_selector(piece)
+                if norm:
+                    selectors.add(norm)
+        for raw in harvest_string_selectors(text):
+            for piece in raw.split(","):
+                norm = normalize_selector(piece)
+                if norm:
+                    selectors.add(norm)
+    return selectors

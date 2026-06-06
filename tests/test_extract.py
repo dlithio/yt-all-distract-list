@@ -58,3 +58,23 @@ def test_harvest_string_selectors_picks_yt_like_strings():
     assert "ytd-comments" in found
     assert "#related" in found
     assert "hello world" not in found
+
+
+from lockedin_filters.extract import extract_selectors
+
+
+def test_extract_selectors_integration(tmp_path):
+    content = tmp_path / "content"
+    content.mkdir()
+    (content / "index.js").write_text(
+        'x.textContent = `ytd-reel-shelf-renderer { display:none !important; }`;\n'
+        'y.textContent = `#movie_player { filter:none !important; }`;\n'   # protected -> skipped
+        'z.textContent = `.keep { visibility:visible !important; }`;\n'    # restore -> skipped
+        "const s = 'ytd-comments'; toggle('img');\n"                       # img -> over-broad skip
+    )
+    result = extract_selectors(content)
+    assert "ytd-reel-shelf-renderer" in result
+    assert "ytd-comments" in result
+    assert "#movie_player" not in result
+    assert ".keep" not in result
+    assert "img" not in result
