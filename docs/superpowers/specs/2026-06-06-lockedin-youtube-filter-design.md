@@ -83,8 +83,8 @@ Harvests hide-selectors from the upstream extension source and converts them to 
 - trim; collapse internal whitespace/newlines.
 - strip `html[data-lockedin-...]` ancestor prefixes.
 - remove `:not([data-lockedin-...])` and bare `[data-lockedin-*]` guards.
-- **protected-selectors skip** (see 4.5) — never emit a rule for the player, transcript panel, or
-  extension scaffolding.
+- **protected-selectors skip** (see 4.5) — never emit a rule for the player, transcript panel,
+  extension scaffolding, or the **"Ask" button** (the AI button near like/dislike).
 - **over-broad guard:** the normalized selector must contain ≥1 real YouTube token
   (`ytd-`, `ytm-`, `tp-yt-`, `yt-`, `.ytp-`, a `*-view-model` web-component name, or a known YT id);
   otherwise skip + log. Prevents `img`, `span`, `#primary`, `#contents`, bare `video`, and the
@@ -152,14 +152,17 @@ Exit nonzero (→ CI does **not** publish) on any of:
 - missing/malformed metadata header;
 - **playback protection** — any rule targeting the video player (`#movie_player`,
   `.html5-video-player`, `.html5-main-video`, `video.video-stream`);
+- **protected-element violation** — any rule targeting the transcript/description side panel or the
+  **"Ask" button** near like/dislike (exact selector to be confirmed on-device — see Section 14);
 - **supplement-floor violation** — the published list does not contain every supplement rule
   (enforces the Section 3 invariant);
 - **explosion check** — rule count cratered toward zero or ballooned far beyond the currently
   published list (catches a broken upstream parse).
 
 > **Terminology note:** the "protected selectors" (player, transcript/description side panel,
-> extension scaffolding) are the *only* things shielded from hiding. **Engagement metrics — likes,
-> dislikes, view count, subscriber count — ARE blocked.** They are never protected.
+> extension scaffolding, and the **"Ask" button** near like/dislike) are the *only* things shielded
+> from hiding. **Engagement metrics — likes, dislikes, view count, subscriber count — ARE
+> blocked.** They are never protected.
 
 ---
 
@@ -378,7 +381,7 @@ youtube.com##.ytSearchboxComponentSuggestionsContainer
 
 ```
 ! Title: LockedIn YouTube — Maximalist Distraction Filter
-! Description: Strips YouTube to a focus-only surface (home feed, Shorts, recommendations, thumbnails, comments, end screens, autoplay UI, engagement metrics, navigation clutter). Derived from the LockedIn-YT extension. Works in uBlock Origin (desktop) and AdGuard for iOS.
+! Description: Strips YouTube to a focus-only surface: home feed, Shorts, watch-page recommendations, thumbnails, comments, player end screens, engagement metrics (likes, views, subscriber count), and guide/navigation clutter. Derived from the LockedIn-YT extension. Works in uBlock Origin (desktop) and AdGuard for iOS.
 ! Homepage: https://github.com/dlithio/yt-all-distract-list
 ! Source extension: https://github.com/KartikHalkunde/LockedIn-YT (MIT, © Kartik Halkunde)
 ! Expires: 1 day
@@ -423,7 +426,10 @@ youtube.com##.ytSearchboxComponentSuggestionsContainer
    has changed, revisit the single-list assumption before building.
 2. Confirm the upstream repo (`KartikHalkunde/LockedIn-YT`) still matches the harvest assumptions
    in 4.1 (three blocking forms, `manifest.json` content scripts).
-3. Decide the exact daily cron time (cosmetic).
+3. **Confirm the exact "Ask" button selector** on-device (the AI button near like/dislike) so the
+   protected-element check guards the right element. Until confirmed, protect by best-effort match
+   (e.g. an `[aria-label^="Ask" i]` button within the watch actions row).
+4. Decide the exact daily cron time (cosmetic).
 
 ---
 
@@ -432,5 +438,5 @@ youtube.com##.ytSearchboxComponentSuggestionsContainer
 - URL redirects and true autoplay-off (not possible in a cosmetic filter list).
 - External/community filter lists (decision #2 — LockedIn-YT only).
 - Auto-merged-PR or Pages/Release publishing (decision #3 — direct commit to main).
-- Hiding the video player or transcript panel (protected selectors).
+- Hiding the video player, transcript panel, or the "Ask" button (protected selectors).
 ```
