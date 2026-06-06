@@ -125,7 +125,6 @@ youtube.com##yt-chip-cloud-chip-renderer:has(div[title*="Shorts" i])
 youtube.com##yt-chip-cloud-chip-renderer:has(div[title="Home"])
 youtube.com##yt-formatted-string#owner-sub-count
 youtube.com##yt-formatted-string#subscriber-count
-youtube.com##yt-lockup-view-model
 youtube.com##yt-lockup-view-model:not(:hover) .yt-lockup-view-model-wiz__content-image
 youtube.com##yt-lockup-view-model:not(:hover) yt-thumbnail-view-model
 youtube.com##yt-tab-shape:has(a[href="/"])
@@ -140,7 +139,6 @@ youtube.com##ytd-browse[page-subtype="home"]
 youtube.com##ytd-browse[page-subtype="home"] #primary
 youtube.com##ytd-button-renderer:has-text(Premium)
 youtube.com##ytd-button-renderer:has-text(Try it free)
-youtube.com##ytd-channel-renderer
 youtube.com##ytd-chips-shelf-with-video-shelf-renderer
 youtube.com##ytd-comments
 youtube.com##ytd-comments#comments
@@ -153,14 +151,12 @@ youtube.com##ytd-compact-video-renderer:has([href^="/shorts/"])
 youtube.com##ytd-compact-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"])
 youtube.com##ytd-compact-video-renderer:not(:hover) ytd-thumbnail
 youtube.com##ytd-compact-video-renderer[is-shorts]
-youtube.com##ytd-continuation-item-renderer
 youtube.com##ytd-display-ad-renderer
 youtube.com##ytd-expanded-shelf-contents-renderer
 youtube.com##ytd-feed-filter-chip-bar-renderer tp-yt-paper-tab:has(a[href="/"])
 youtube.com##ytd-feed-filter-chip-bar-renderer tp-yt-paper-tab:has(a[href^="/shorts"])
 youtube.com##ytd-feed-filter-chip-bar-renderer yt-chip-cloud-chip-renderer:has(a[href="/"])
 youtube.com##ytd-feed-filter-chip-bar-renderer yt-chip-cloud-chip-renderer:has(a[href^="/shorts"])
-youtube.com##ytd-grid-video-renderer
 youtube.com##ytd-grid-video-renderer:has([href^="/shorts/"])
 youtube.com##ytd-grid-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"])
 youtube.com##ytd-guide-collapsible-entry-renderer
@@ -197,7 +193,6 @@ youtube.com##ytd-guide-section-renderer:has(a#endpoint[href^="/feed/subscription
 youtube.com##ytd-guide-section-renderer:has(a[title="Shopping"])
 youtube.com##ytd-guide-section-renderer:has(a[title="YouTube Premium"])
 youtube.com##ytd-horizontal-card-list-renderer
-youtube.com##ytd-item-section-renderer
 youtube.com##ytd-item-section-renderer > #contents
 youtube.com##ytd-item-section-renderer.ytd-watch-next-secondary-results-renderer > #contents
 youtube.com##ytd-logo
@@ -225,10 +220,8 @@ youtube.com##ytd-playlist-header-renderer .hero-image-container
 youtube.com##ytd-playlist-header-renderer yt-image
 youtube.com##ytd-playlist-panel-renderer
 youtube.com##ytd-playlist-panel-view-model
-youtube.com##ytd-playlist-renderer
 youtube.com##ytd-playlist-thumbnail
 youtube.com##ytd-playlist-thumbnail img
-youtube.com##ytd-playlist-video-renderer
 youtube.com##ytd-primetime-promo-renderer
 youtube.com##ytd-promoted-sparkles-web-renderer
 youtube.com##ytd-reel-item-renderer
@@ -270,7 +263,6 @@ youtube.com##ytd-two-column-browse-results-renderer #primary
 youtube.com##ytd-two-column-search-results-renderer ytd-horizontal-card-list-renderer
 youtube.com##ytd-two-column-search-results-renderer ytd-shelf-renderer
 youtube.com##ytd-video-meta-block span.ytd-video-meta-block:first-of-type
-youtube.com##ytd-video-renderer
 youtube.com##ytd-video-renderer:has([href^="/shorts/"])
 youtube.com##ytd-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"])
 youtube.com##ytd-video-renderer:not(:hover) ytd-thumbnail
@@ -296,9 +288,7 @@ youtube.com##ytm-comments-section-renderer
 youtube.com##ytm-compact-autoplay-renderer
 youtube.com##ytm-compact-video-renderer
 youtube.com##ytm-feed
-youtube.com##ytm-grid-video-renderer
 youtube.com##ytm-horizontal-card-list-renderer
-youtube.com##ytm-item-section-renderer
 youtube.com##ytm-item-section-renderer:has(ytm-backstage-post-renderer)
 youtube.com##ytm-item-section-renderer:has(ytm-post-renderer)
 youtube.com##ytm-item-section-renderer[section-identifier="related-items"]
@@ -330,7 +320,6 @@ youtube.com##ytm-structured-description-content-renderer
 youtube.com##ytm-thumbnail
 youtube.com##ytm-thumbnail img
 youtube.com##ytm-thumbnail-element img
-youtube.com##ytm-video-with-context-renderer
 youtube.com##ytm-watch-next-secondary-results-renderer
 youtube.com#?#ytd-button-renderer:contains(Premium)
 youtube.com#?#ytd-button-renderer:contains(Try it free)
