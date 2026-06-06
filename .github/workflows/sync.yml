@@ -1,0 +1,37 @@
+name: sync
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --frozen
+      - name: Clone upstream (read-only; never executed)
+        run: git clone --depth 1 https://github.com/KartikHalkunde/LockedIn-YT.git upstream
+      - name: Build the list
+        run: |
+          BUILD_DATE=$(date -u +%Y.%m.%d) \
+            uv run python -m lockedin_filters.build \
+              --upstream upstream \
+              --supplement data/supplement.txt \
+              --out dist/lockedin-youtube.txt \
+              --snapshot data/upstream-selectors.snapshot.json
+      - name: Lint gate (no publish on failure)
+        run: uv run python -m lockedin_filters.lint dist/lockedin-youtube.txt --supplement data/supplement.txt
+      - name: Commit if changed
+        run: |
+          if [[ -n "$(git status --porcelain dist data)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add dist/lockedin-youtube.txt data/upstream-selectors.snapshot.json
+            git commit -m "chore: daily sync $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No changes since last run."
+          fi
