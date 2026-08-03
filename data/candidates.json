@@ -1159,6 +1159,16 @@
     "in_supplement": false
   },
   {
+    "selector": "yt-navigate",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
     "selector": "yt-tab-shape:has(a[href=\"/\"])",
     "sources": [
       "css"

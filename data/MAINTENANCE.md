@@ -1,12 +1,13 @@
 # Maintenance Report
 
-- Generated: 2026.08.02
-- Upstream commit: 2042851c275db63c256f01548bfd1e4d429fe669
-- Harvested: 304 | published: 168 | in supplement: 17 | unblocked candidates: 136
+- Generated: 2026.08.03
+- Upstream commit: fa16c55fd36eb7fc398dbdc2ceca987ed5361eed
+- Harvested: 305 | published: 168 | in supplement: 17 | unblocked candidates: 137
 
 ## Changes since last run
 
-_No new selectors._
+**New upstream selectors:**
+- `yt-navigate`
 
 _No removed selectors._
 
@@ -46,6 +47,7 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `more-from-yt-spacer`
 - `yt-badge-view-model`
 - `yt-chip-cloud-chip-renderer`
+- `yt-navigate`
 - `ytd-backstage-post-thread-renderer`
 - `ytd-brand-video-singleton-renderer`
 - `ytd-browse[page-subtype="home"]`
