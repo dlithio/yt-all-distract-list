@@ -1,13 +1,12 @@
 # Maintenance Report
 
-- Generated: 2026.08.03
+- Generated: 2026.08.04
 - Upstream commit: fa16c55fd36eb7fc398dbdc2ceca987ed5361eed
 - Harvested: 305 | published: 168 | in supplement: 17 | unblocked candidates: 137
 
 ## Changes since last run
 
-**New upstream selectors:**
-- `yt-navigate`
+_No new selectors._
 
 _No removed selectors._
 
