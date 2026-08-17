@@ -2371,7 +2371,27 @@
     "in_supplement": true
   },
   {
+    "selector": "ytd-thumbnail-overlay-time-status-renderer[overlay-style=\"LIVE\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
     "selector": "ytd-thumbnail-overlay-time-status-renderer[overlay-style=\"SHORTS\"]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-thumbnail-overlay-time-status-renderer[overlay-style=\"UPCOMING\"]",
     "sources": [
       "string"
     ],

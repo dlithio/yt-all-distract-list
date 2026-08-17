@@ -1,12 +1,14 @@
 # Maintenance Report
 
-- Generated: 2026.08.16
-- Upstream commit: fa16c55fd36eb7fc398dbdc2ceca987ed5361eed
-- Harvested: 305 | published: 168 | in supplement: 17 | unblocked candidates: 137
+- Generated: 2026.08.17
+- Upstream commit: 89de73ac8a1a1b680eacaab99d1c791a2a603a6f
+- Harvested: 307 | published: 168 | in supplement: 17 | unblocked candidates: 139
 
 ## Changes since last run
 
-_No new selectors._
+**New upstream selectors:**
+- `ytd-thumbnail-overlay-time-status-renderer[overlay-style="LIVE"]`
+- `ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"]`
 
 _No removed selectors._
 
@@ -100,7 +102,9 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `ytd-rich-shelf-renderer`
 - `ytd-rich-shelf-renderer[has-expansion-button][restrict-contents-overflow]`
 - `ytd-shelf-renderer`
+- `ytd-thumbnail-overlay-time-status-renderer[overlay-style="LIVE"]`
 - `ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]`
+- `ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"]`
 - `ytd-two-column-browse-results-renderer`
 - `ytd-two-column-browse-results-renderer #primary`
 - `ytd-watch-next-secondary-results-renderer`
