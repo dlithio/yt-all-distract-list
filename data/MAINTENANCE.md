@@ -1,14 +1,12 @@
 # Maintenance Report
 
-- Generated: 2026.08.17
-- Upstream commit: 89de73ac8a1a1b680eacaab99d1c791a2a603a6f
+- Generated: 2026.08.18
+- Upstream commit: 575444ff6171f0d79621bb9a1de55b86ed4754da
 - Harvested: 307 | published: 168 | in supplement: 17 | unblocked candidates: 139
 
 ## Changes since last run
 
-**New upstream selectors:**
-- `ytd-thumbnail-overlay-time-status-renderer[overlay-style="LIVE"]`
-- `ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"]`
+_No new selectors._
 
 _No removed selectors._
 
