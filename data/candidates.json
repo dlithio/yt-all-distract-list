@@ -1249,6 +1249,27 @@
     "in_supplement": false
   },
   {
+    "selector": "ytd-brand-video-shelf-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-brand-video-shelf-renderer #dismissible",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
     "selector": "ytd-brand-video-singleton-renderer",
     "sources": [
       "string"
@@ -2211,6 +2232,36 @@
     "in_supplement": false
   },
   {
+    "selector": "ytd-rich-section-renderer:has(a[href*=\"/channel_memberships\" i])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-section-renderer:has(a[href*=\"members-only\" i])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-section-renderer:has(ytd-brand-video-shelf-renderer)",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
     "selector": "ytd-rich-section-renderer:has(ytd-rich-item-renderer[is-post])",
     "sources": [
       "string"
@@ -2232,6 +2283,26 @@
   },
   {
     "selector": "ytd-rich-shelf-renderer:has([href^=\"/shorts/\"])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-shelf-renderer:has(a[href*=\"/channel_memberships\" i])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-shelf-renderer:has(a[href*=\"members-only\" i])",
     "sources": [
       "css"
     ],

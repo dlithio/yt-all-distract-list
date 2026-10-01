@@ -1,12 +1,19 @@
 # Maintenance Report
 
-- Generated: 2026.09.30
-- Upstream commit: 138c632ead0adb079d5ccdc3eb278db9588d6563
-- Harvested: 307 | published: 168 | in supplement: 17 | unblocked candidates: 139
+- Generated: 2026.10.01
+- Upstream commit: f44a5bbbed6bb5588d6355e2661a7fe5daf217b5
+- Harvested: 314 | published: 175 | in supplement: 17 | unblocked candidates: 139
 
 ## Changes since last run
 
-_No new selectors._
+**New upstream selectors:**
+- `ytd-brand-video-shelf-renderer`
+- `ytd-brand-video-shelf-renderer #dismissible`
+- `ytd-rich-section-renderer:has(a[href*="/channel_memberships" i])`
+- `ytd-rich-section-renderer:has(a[href*="members-only" i])`
+- `ytd-rich-section-renderer:has(ytd-brand-video-shelf-renderer)`
+- `ytd-rich-shelf-renderer:has(a[href*="/channel_memberships" i])`
+- `ytd-rich-shelf-renderer:has(a[href*="members-only" i])`
 
 _No removed selectors._
 
