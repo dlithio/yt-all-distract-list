@@ -3,7 +3,7 @@
 ! Homepage: https://github.com/dlithio/yt-all-distract-list
 ! Source extension: https://github.com/KartikHalkunde/LockedIn-YT (MIT, © Kartik Halkunde)
 ! Expires: 1 day
-! Version: 2026.10.01
+! Version: 2026.10.02
 ! License: MIT
 !
 youtube.com###mouseover-overlay
@@ -44,25 +44,51 @@ youtube.com##.ytd-display-ad-renderer #media-container
 youtube.com##.ytm-autonav-bar
 youtube.com##.ytm-autonav-toggle-button-container
 youtube.com##.ytm-upnext-autoplay-container
+youtube.com##.ytp-autonav-endscreen-button-container
+youtube.com##.ytp-autonav-endscreen-countdown-container
+youtube.com##.ytp-autonav-endscreen-upnext-container
 youtube.com##.ytp-autonav-toggle-button
 youtube.com##.ytp-autonav-toggle-button-bg
 youtube.com##.ytp-autonav-toggle-button-cancel
 youtube.com##.ytp-autonav-toggle-button-container
 youtube.com##.ytp-autonav-toggle-button-visible
 youtube.com##.ytp-autonav-toggle-tooltip
+youtube.com##.ytp-ce-channel
+youtube.com##.ytp-ce-covering-image
+youtube.com##.ytp-ce-covering-overlay
 youtube.com##.ytp-ce-element
+youtube.com##.ytp-ce-element-show
+youtube.com##.ytp-ce-expanding-overlay
+youtube.com##.ytp-ce-playlist
+youtube.com##.ytp-ce-shadow
+youtube.com##.ytp-ce-size-1280
+youtube.com##.ytp-ce-size-853
+youtube.com##.ytp-ce-video
+youtube.com##.ytp-ce-website
 youtube.com##.ytp-chrome-bottom [aria-label*="Autoplay" i]
 youtube.com##.ytp-chrome-bottom [data-tooltip*="Autoplay" i]
 youtube.com##.ytp-chrome-controls [aria-label*="Autoplay" i]
 youtube.com##.ytp-chrome-controls [data-tooltip*="Autoplay" i]
 youtube.com##.ytp-cued-thumbnail-overlay
+youtube.com##.ytp-endscreen-content
+youtube.com##.ytp-endscreen-next
+youtube.com##.ytp-endscreen-paginate
+youtube.com##.ytp-endscreen-previous
 youtube.com##.ytp-fullscreen-grid
+youtube.com##.ytp-modern-videowall
+youtube.com##.ytp-modern-videowall-container
 youtube.com##.ytp-modern-videowall-still-image
 youtube.com##.ytp-next-button
+youtube.com##.ytp-pause-overlay
+youtube.com##.ytp-pause-overlay-container
 youtube.com##.ytp-prev-button
+youtube.com##.ytp-suggestion-set
+youtube.com##.ytp-upnext
 youtube.com##.ytp-upnext-autoplay-icon
 youtube.com##.ytp-videowall-still
 youtube.com##.ytp-videowall-still-image
+youtube.com##.ytp-videowall-still-info
+youtube.com##.ytp-videowall-still-list
 youtube.com##[page-subtype="search"] grid-shelf-view-model
 youtube.com##[page-subtype="search"] ytd-horizontal-card-list-renderer
 youtube.com##[page-subtype="search"] ytd-reel-shelf-renderer

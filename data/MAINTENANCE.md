@@ -1,21 +1,27 @@
 # Maintenance Report
 
-- Generated: 2026.10.01
-- Upstream commit: f44a5bbbed6bb5588d6355e2661a7fe5daf217b5
-- Harvested: 314 | published: 175 | in supplement: 17 | unblocked candidates: 139
+- Generated: 2026.10.02
+- Upstream commit: 637944efc69febf20f5d29c295fa706a00b67d25
+- Harvested: 325 | published: 201 | in supplement: 17 | unblocked candidates: 124
 
 ## Changes since last run
 
 **New upstream selectors:**
-- `ytd-brand-video-shelf-renderer`
-- `ytd-brand-video-shelf-renderer #dismissible`
-- `ytd-rich-section-renderer:has(a[href*="/channel_memberships" i])`
-- `ytd-rich-section-renderer:has(a[href*="members-only" i])`
-- `ytd-rich-section-renderer:has(ytd-brand-video-shelf-renderer)`
-- `ytd-rich-shelf-renderer:has(a[href*="/channel_memberships" i])`
-- `ytd-rich-shelf-renderer:has(a[href*="members-only" i])`
+- `.ytp-autonav-endscreen-button-container`
+- `.ytp-autonav-endscreen-countdown-container`
+- `.ytp-ce-covering-image`
+- `.ytp-ce-expanding-overlay`
+- `.ytp-endscreen-paginate`
+- `.ytp-modern-videowall`
+- `.ytp-modern-videowall-container`
+- `.ytp-pause-overlay`
+- `.ytp-pause-overlay-container`
+- `.ytp-videowall-still-info`
+- `.ytp-videowall-still-list`
+- `ytd-player`
 
-_No removed selectors._
+**Removed upstream selectors:**
+- `.ytp-show-tiles`
 
 ## Unblocked candidates
 
@@ -30,24 +36,8 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `.ytp-autonav-endscreen`
 - `.ytp-autonav-endscreen-countdown`
 - `.ytp-autonav-endscreen-upnext-button`
-- `.ytp-autonav-endscreen-upnext-container`
 - `.ytp-autonav-toggle-button-container button`
-- `.ytp-ce-channel`
-- `.ytp-ce-covering-overlay`
-- `.ytp-ce-element-show`
-- `.ytp-ce-playlist`
-- `.ytp-ce-shadow`
-- `.ytp-ce-size-1280`
-- `.ytp-ce-size-853`
-- `.ytp-ce-video`
-- `.ytp-ce-website`
-- `.ytp-endscreen-content`
-- `.ytp-endscreen-next`
-- `.ytp-endscreen-previous`
-- `.ytp-show-tiles`
-- `.ytp-suggestion-set`
 - `.ytp-time-duration`
-- `.ytp-upnext`
 - `.ytp-upnext-container`
 - `grid-shelf-view-model`
 - `more-from-yt-spacer`
@@ -92,6 +82,7 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `ytd-mini-guide-entry-renderer a[href^="/shorts"]`
 - `ytd-mini-guide-entry-renderer a[title="Home"]`
 - `ytd-mini-guide-entry-renderer a[title="Shorts"]`
+- `ytd-player`
 - `ytd-playlist-panel-renderer`
 - `ytd-playlist-panel-view-model`
 - `ytd-rich-grid-renderer`

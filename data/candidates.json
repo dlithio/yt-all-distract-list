@@ -444,6 +444,17 @@
     "in_supplement": false
   },
   {
+    "selector": ".ytp-autonav-endscreen-button-container",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
     "selector": ".ytp-autonav-endscreen-countdown",
     "sources": [
       "string"
@@ -451,6 +462,17 @@
     "scoped": false,
     "guard": null,
     "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-autonav-endscreen-countdown-container",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
     "in_supplement": false
   },
   {
@@ -466,11 +488,12 @@
   {
     "selector": ".ytp-autonav-endscreen-upnext-container",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
     "guard": null,
-    "published": false,
+    "published": true,
     "in_supplement": false
   },
   {
@@ -546,26 +569,40 @@
   {
     "selector": ".ytp-ce-channel",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
     "guard": null,
-    "published": false,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-ce-covering-image",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
     "in_supplement": false
   },
   {
     "selector": ".ytp-ce-covering-overlay",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
     "guard": null,
-    "published": false,
+    "published": true,
     "in_supplement": false
   },
   {
     "selector": ".ytp-ce-element",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
@@ -576,71 +613,89 @@
   {
     "selector": ".ytp-ce-element-show",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
     "guard": null,
-    "published": false,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-ce-expanding-overlay",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
     "in_supplement": false
   },
   {
     "selector": ".ytp-ce-playlist",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
     "guard": null,
-    "published": false,
+    "published": true,
     "in_supplement": false
   },
   {
     "selector": ".ytp-ce-shadow",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
     "guard": null,
-    "published": false,
+    "published": true,
     "in_supplement": false
   },
   {
     "selector": ".ytp-ce-size-1280",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
     "guard": null,
-    "published": false,
+    "published": true,
     "in_supplement": false
   },
   {
     "selector": ".ytp-ce-size-853",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
     "guard": null,
-    "published": false,
+    "published": true,
     "in_supplement": false
   },
   {
     "selector": ".ytp-ce-video",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
     "guard": null,
-    "published": false,
+    "published": true,
     "in_supplement": false
   },
   {
     "selector": ".ytp-ce-website",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
     "guard": null,
-    "published": false,
+    "published": true,
     "in_supplement": false
   },
   {
@@ -686,31 +741,67 @@
   {
     "selector": ".ytp-endscreen-content",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
     "guard": null,
-    "published": false,
+    "published": true,
     "in_supplement": false
   },
   {
     "selector": ".ytp-endscreen-next",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
     "guard": null,
-    "published": false,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-endscreen-paginate",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
     "in_supplement": false
   },
   {
     "selector": ".ytp-endscreen-previous",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
     "guard": null,
-    "published": false,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-modern-videowall",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-modern-videowall-container",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
     "in_supplement": false
   },
   {
@@ -735,6 +826,28 @@
     "in_supplement": false
   },
   {
+    "selector": ".ytp-pause-overlay",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-pause-overlay-container",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
     "selector": ".ytp-prev-button",
     "sources": [
       "css",
@@ -746,23 +859,14 @@
     "in_supplement": false
   },
   {
-    "selector": ".ytp-show-tiles",
-    "sources": [
-      "string"
-    ],
-    "scoped": false,
-    "guard": null,
-    "published": false,
-    "in_supplement": false
-  },
-  {
     "selector": ".ytp-suggestion-set",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
     "guard": null,
-    "published": false,
+    "published": true,
     "in_supplement": false
   },
   {
@@ -778,11 +882,12 @@
   {
     "selector": ".ytp-upnext",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
     "guard": null,
-    "published": false,
+    "published": true,
     "in_supplement": false
   },
   {
@@ -809,6 +914,7 @@
   {
     "selector": ".ytp-videowall-still",
     "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
@@ -818,6 +924,28 @@
   },
   {
     "selector": ".ytp-videowall-still-image",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-videowall-still-info",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": ".ytp-videowall-still-list",
     "sources": [
       "css",
       "string"
@@ -1998,6 +2126,16 @@
     "guard": null,
     "published": true,
     "in_supplement": true
+  },
+  {
+    "selector": "ytd-player",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
   },
   {
     "selector": "ytd-playlist-panel-renderer",
