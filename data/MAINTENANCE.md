@@ -1,7 +1,7 @@
 # Maintenance Report
 
-- Generated: 2026.11.05
-- Upstream commit: d18780c57d8a46f7b34076f83dd339cd4dd0be98
+- Generated: 2026.11.06
+- Upstream commit: 39ada139f34b3497840e1b9bf6913478e6aaed38
 - Harvested: 325 | published: 201 | in supplement: 17 | unblocked candidates: 124
 
 ## Changes since last run
