@@ -1,14 +1,46 @@
 # Maintenance Report
 
-- Generated: 2026.11.08
-- Upstream commit: 39ada139f34b3497840e1b9bf6913478e6aaed38
-- Harvested: 325 | published: 201 | in supplement: 17 | unblocked candidates: 124
+- Generated: 2026.11.09
+- Upstream commit: c25a41c1e0e012f409607a06f53a14b32a51eb8c
+- Harvested: 351 | published: 217 | in supplement: 18 | unblocked candidates: 134
 
 ## Changes since last run
 
-_No new selectors._
+**New upstream selectors:**
+- `#center.ytd-masthead`
+- `yt-formatted-string`
+- `yt-icon`
+- `yt-navigate-start`
+- `yt-searchbox`
+- `yt-searchbox input`
+- `ytd-browse[page-subtype="home"] #contents`
+- `ytd-browse[page-subtype="home"] #header`
+- `ytd-browse[page-subtype="home"] #primary`
+- `ytd-browse[page-subtype="home"] ytd-feed-filter-chip-bar-renderer`
+- `ytd-browse[page-subtype="home"] ytd-rich-grid-renderer`
+- `ytd-masthead #center`
+- `ytd-masthead #search`
+- `ytd-masthead #voice-search-button`
+- `ytd-masthead .ytSearchboxComponentHost`
+- `ytd-masthead form#search-form`
+- `ytd-masthead input#search`
+- `ytd-masthead yt-searchbox`
+- `ytd-masthead ytd-searchbox`
+- `ytd-page-manager`
+- `ytd-searchbox`
+- `ytd-topbar-logo-renderer`
+- `ytd-topbar-logo-renderer #country-code`
+- `ytd-topbar-logo-renderer yt-icon`
+- `ytd-voice-search-dialog-renderer`
+- `ytm-browse .chip-bar`
+- `ytm-browse ytm-feed`
+- `ytm-browse ytm-rich-grid-renderer`
+- `ytm-mobile-topbar-renderer .header-search-box`
 
-_No removed selectors._
+**Removed upstream selectors:**
+- `ytd-two-column-browse-results-renderer #primary`
+- `ytm-feed`
+- `ytm-rich-grid-renderer`
 
 ## Unblocked candidates
 
@@ -30,10 +62,15 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `more-from-yt-spacer`
 - `yt-badge-view-model`
 - `yt-chip-cloud-chip-renderer`
+- `yt-formatted-string`
+- `yt-icon`
 - `yt-navigate`
+- `yt-navigate-start`
+- `yt-searchbox input`
 - `ytd-backstage-post-thread-renderer`
 - `ytd-brand-video-singleton-renderer`
 - `ytd-browse[page-subtype="home"]`
+- `ytd-browse[page-subtype="home"] #contents`
 - `ytd-chips-shelf-with-video-shelf-renderer`
 - `ytd-comments#comments`
 - `ytd-comments-entry-point-header-renderer`
@@ -60,6 +97,8 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `ytd-horizontal-card-list-renderer`
 - `ytd-item-section-renderer > #contents`
 - `ytd-logo`
+- `ytd-masthead #voice-search-button`
+- `ytd-masthead input#search`
 - `ytd-mini-guide-entry-renderer`
 - `ytd-mini-guide-entry-renderer #endpoint[title="Home"]`
 - `ytd-mini-guide-entry-renderer #endpoint[title="Shorts"]`
@@ -88,15 +127,17 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `ytd-thumbnail-overlay-time-status-renderer[overlay-style="LIVE"]`
 - `ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]`
 - `ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"]`
+- `ytd-topbar-logo-renderer`
+- `ytd-topbar-logo-renderer #country-code`
+- `ytd-topbar-logo-renderer yt-icon`
 - `ytd-two-column-browse-results-renderer`
-- `ytd-two-column-browse-results-renderer #primary`
+- `ytd-voice-search-dialog-renderer`
 - `ytd-watch-next-secondary-results-renderer`
 - `ytm-backstage-post-renderer`
 - `ytm-comment-thread-renderer`
 - `ytm-comments-entry-point-header-renderer`
 - `ytm-compact-autoplay-renderer`
 - `ytm-compact-video-renderer`
-- `ytm-feed`
 - `ytm-horizontal-card-list-renderer`
 - `ytm-item-section-renderer:has(ytm-backstage-post-renderer)`
 - `ytm-item-section-renderer:has(ytm-post-renderer)`
@@ -107,7 +148,6 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `ytm-playlist-panel-renderer`
 - `ytm-post-renderer`
 - `ytm-reel-item-renderer`
-- `ytm-rich-grid-renderer`
 - `ytm-rich-item-renderer`
 - `ytm-rich-item-renderer:has(ytm-post-renderer)`
 - `ytm-rich-shelf-renderer`
@@ -128,8 +168,10 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `ytd-engagement-panel-section-list-renderer`  ⚠ protected element — do not hide
 - `ytd-grid-video-renderer`  ⚠ shared content renderer — would blank search
 - `ytd-item-section-renderer`  ⚠ shared content renderer — would blank search
+- `ytd-page-manager`  ⚠ over-broad page shell — scope before adding
 - `ytd-playlist-renderer`  ⚠ shared content renderer — would blank search
 - `ytd-playlist-video-renderer`  ⚠ shared content renderer — would blank search
+- `ytd-searchbox`  ⚠ search surface — would break search
 - `ytd-transcript-segment-list-renderer`  ⚠ protected element — do not hide
 - `ytd-video-renderer`  ⚠ shared content renderer — would blank search
 - `ytd-watch-next-secondary-results-renderer ytd-continuation-item-renderer:not(:has(ytd-engagement-panel-section-list-renderer)):not(:has(ytd-transcript-segment-list-renderer))`  ⚠ protected element — do not hide

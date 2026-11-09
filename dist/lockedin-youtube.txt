@@ -3,9 +3,10 @@
 ! Homepage: https://github.com/dlithio/yt-all-distract-list
 ! Source extension: https://github.com/KartikHalkunde/LockedIn-YT (MIT, © Kartik Halkunde)
 ! Expires: 1 day
-! Version: 2026.10.02
+! Version: 2026.11.09
 ! License: MIT
 !
+youtube.com###center.ytd-masthead
 youtube.com###mouseover-overlay
 youtube.com###primary > .ytd-two-column-search-results-renderer ytd-horizontal-card-list-renderer
 youtube.com###primary > .ytd-two-column-search-results-renderer ytd-shelf-renderer
@@ -122,6 +123,7 @@ youtube.com##yt-formatted-string#owner-sub-count
 youtube.com##yt-formatted-string#subscriber-count
 youtube.com##yt-lockup-view-model:not(:hover) .yt-lockup-view-model-wiz__content-image
 youtube.com##yt-lockup-view-model:not(:hover) yt-thumbnail-view-model
+youtube.com##yt-searchbox
 youtube.com##yt-tab-shape:has(a[href="/"])
 youtube.com##yt-tab-shape:has(a[href^="/home"])
 youtube.com##yt-tab-shape:has(a[href^="/shorts"])
@@ -131,7 +133,10 @@ youtube.com##yt-thumbnail-view-model img
 youtube.com##ytd-ad-slot-renderer
 youtube.com##ytd-brand-video-shelf-renderer
 youtube.com##ytd-brand-video-shelf-renderer #dismissible
+youtube.com##ytd-browse[page-subtype="home"] #header
 youtube.com##ytd-browse[page-subtype="home"] #primary
+youtube.com##ytd-browse[page-subtype="home"] ytd-feed-filter-chip-bar-renderer
+youtube.com##ytd-browse[page-subtype="home"] ytd-rich-grid-renderer
 youtube.com##ytd-browse[page-subtype="subscriptions"] #primary
 youtube.com##ytd-button-renderer:has-text(Premium)
 youtube.com##ytd-button-renderer:has-text(Try it free)
@@ -167,6 +172,12 @@ youtube.com##ytd-guide-section-renderer:has(a[title="Shopping"])
 youtube.com##ytd-guide-section-renderer:has(a[title="YouTube Premium"])
 youtube.com##ytd-in-feed-ad-layout-renderer
 youtube.com##ytd-item-section-renderer.ytd-watch-next-secondary-results-renderer > #contents
+youtube.com##ytd-masthead #center
+youtube.com##ytd-masthead #search
+youtube.com##ytd-masthead .ytSearchboxComponentHost
+youtube.com##ytd-masthead form#search-form
+youtube.com##ytd-masthead yt-searchbox
+youtube.com##ytd-masthead ytd-searchbox
 youtube.com##ytd-mini-guide-entry-renderer:has(#endpoint[title="Home"])
 youtube.com##ytd-mini-guide-entry-renderer:has(#endpoint[title="Shorts"])
 youtube.com##ytd-mini-guide-entry-renderer:has(a[href="/"])
@@ -229,9 +240,13 @@ youtube.com##ytd-watch-next-secondary-results-renderer ytd-feed-filter-chip-bar-
 youtube.com##ytd-watch-next-secondary-results-renderer ytd-reel-item-renderer
 youtube.com##ytd-watch-next-secondary-results-renderer ytd-reel-shelf-renderer
 youtube.com##ytd-watch-next-secondary-results-renderer ytd-video-renderer
+youtube.com##ytm-browse .chip-bar
+youtube.com##ytm-browse ytm-feed
+youtube.com##ytm-browse ytm-rich-grid-renderer
 youtube.com##ytm-browse[page-subtype="home"] ytm-feed
 youtube.com##ytm-browse[page-subtype="subscriptions"] ytm-feed
 youtube.com##ytm-comments-section-renderer
+youtube.com##ytm-mobile-topbar-renderer .header-search-box
 youtube.com##ytm-pivot-bar-item-renderer:has([data-pivot-id="shorts"])
 youtube.com##ytm-pivot-bar-item-renderer:has([href="/"])
 youtube.com##ytm-pivot-bar-item-renderer:has([href="/home"])

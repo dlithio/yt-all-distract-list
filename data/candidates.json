@@ -1,5 +1,15 @@
 [
   {
+    "selector": "#center.ytd-masthead",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
     "selector": "#primary > .ytd-two-column-search-results-renderer ytd-horizontal-card-list-renderer",
     "sources": [
       "css"
@@ -1257,6 +1267,26 @@
     "in_supplement": false
   },
   {
+    "selector": "yt-formatted-string",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-icon",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
     "selector": "yt-lockup-view-model",
     "sources": [
       "string"
@@ -1292,6 +1322,36 @@
       "string"
     ],
     "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-navigate-start",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-searchbox",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "yt-searchbox input",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
     "guard": null,
     "published": false,
     "in_supplement": false
@@ -1415,6 +1475,59 @@
     "scoped": true,
     "guard": null,
     "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-browse[page-subtype=\"home\"] #contents",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-browse[page-subtype=\"home\"] #header",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-browse[page-subtype=\"home\"] #primary",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytd-browse[page-subtype=\"home\"] ytd-feed-filter-chip-bar-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-browse[page-subtype=\"home\"] ytd-rich-grid-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
     "in_supplement": false
   },
   {
@@ -1948,6 +2061,86 @@
     "in_supplement": false
   },
   {
+    "selector": "ytd-masthead #center",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #search",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #voice-search-button",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead .ytSearchboxComponentHost",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead form#search-form",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead input#search",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead yt-searchbox",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead ytd-searchbox",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
     "selector": "ytd-mini-guide-entry-renderer",
     "sources": [
       "string"
@@ -2126,6 +2319,16 @@
     "guard": null,
     "published": true,
     "in_supplement": true
+  },
+  {
+    "selector": "ytd-page-manager",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": "over_broad",
+    "published": false,
+    "in_supplement": false
   },
   {
     "selector": "ytd-player",
@@ -2540,6 +2743,16 @@
     "in_supplement": false
   },
   {
+    "selector": "ytd-searchbox",
+    "sources": [
+      "css"
+    ],
+    "scoped": false,
+    "guard": "search_surface",
+    "published": false,
+    "in_supplement": false
+  },
+  {
     "selector": "ytd-shelf-renderer",
     "sources": [
       "string"
@@ -2610,6 +2823,36 @@
     "in_supplement": false
   },
   {
+    "selector": "ytd-topbar-logo-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-topbar-logo-renderer #country-code",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-topbar-logo-renderer yt-icon",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
     "selector": "ytd-transcript-segment-list-renderer",
     "sources": [
       "string"
@@ -2625,16 +2868,6 @@
       "string"
     ],
     "scoped": false,
-    "guard": null,
-    "published": false,
-    "in_supplement": false
-  },
-  {
-    "selector": "ytd-two-column-browse-results-renderer #primary",
-    "sources": [
-      "string"
-    ],
-    "scoped": true,
     "guard": null,
     "published": false,
     "in_supplement": false
@@ -2697,6 +2930,16 @@
     "scoped": true,
     "guard": null,
     "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-voice-search-dialog-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
     "in_supplement": false
   },
   {
@@ -2887,6 +3130,38 @@
     "in_supplement": false
   },
   {
+    "selector": "ytm-browse .chip-bar",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-browse ytm-feed",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-browse ytm-rich-grid-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
     "selector": "ytm-comment-thread-renderer",
     "sources": [
       "string"
@@ -2943,16 +3218,6 @@
     ],
     "scoped": false,
     "guard": "protected",
-    "published": false,
-    "in_supplement": false
-  },
-  {
-    "selector": "ytm-feed",
-    "sources": [
-      "string"
-    ],
-    "scoped": false,
-    "guard": null,
     "published": false,
     "in_supplement": false
   },
@@ -3014,6 +3279,16 @@
     "scoped": true,
     "guard": null,
     "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-mobile-topbar-renderer .header-search-box",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
     "in_supplement": false
   },
   {
@@ -3156,16 +3431,6 @@
     "guard": null,
     "published": true,
     "in_supplement": true
-  },
-  {
-    "selector": "ytm-rich-grid-renderer",
-    "sources": [
-      "string"
-    ],
-    "scoped": false,
-    "guard": null,
-    "published": false,
-    "in_supplement": false
   },
   {
     "selector": "ytm-rich-item-renderer",
