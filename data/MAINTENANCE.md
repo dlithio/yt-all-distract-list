@@ -1,46 +1,14 @@
 # Maintenance Report
 
-- Generated: 2026.11.09
+- Generated: 2026.11.10
 - Upstream commit: c25a41c1e0e012f409607a06f53a14b32a51eb8c
 - Harvested: 351 | published: 217 | in supplement: 18 | unblocked candidates: 134
 
 ## Changes since last run
 
-**New upstream selectors:**
-- `#center.ytd-masthead`
-- `yt-formatted-string`
-- `yt-icon`
-- `yt-navigate-start`
-- `yt-searchbox`
-- `yt-searchbox input`
-- `ytd-browse[page-subtype="home"] #contents`
-- `ytd-browse[page-subtype="home"] #header`
-- `ytd-browse[page-subtype="home"] #primary`
-- `ytd-browse[page-subtype="home"] ytd-feed-filter-chip-bar-renderer`
-- `ytd-browse[page-subtype="home"] ytd-rich-grid-renderer`
-- `ytd-masthead #center`
-- `ytd-masthead #search`
-- `ytd-masthead #voice-search-button`
-- `ytd-masthead .ytSearchboxComponentHost`
-- `ytd-masthead form#search-form`
-- `ytd-masthead input#search`
-- `ytd-masthead yt-searchbox`
-- `ytd-masthead ytd-searchbox`
-- `ytd-page-manager`
-- `ytd-searchbox`
-- `ytd-topbar-logo-renderer`
-- `ytd-topbar-logo-renderer #country-code`
-- `ytd-topbar-logo-renderer yt-icon`
-- `ytd-voice-search-dialog-renderer`
-- `ytm-browse .chip-bar`
-- `ytm-browse ytm-feed`
-- `ytm-browse ytm-rich-grid-renderer`
-- `ytm-mobile-topbar-renderer .header-search-box`
+_No new selectors._
 
-**Removed upstream selectors:**
-- `ytd-two-column-browse-results-renderer #primary`
-- `ytm-feed`
-- `ytm-rich-grid-renderer`
+_No removed selectors._
 
 ## Unblocked candidates
 
