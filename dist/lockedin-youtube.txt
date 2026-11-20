@@ -3,7 +3,7 @@
 ! Homepage: https://github.com/dlithio/yt-all-distract-list
 ! Source extension: https://github.com/KartikHalkunde/LockedIn-YT (MIT, © Kartik Halkunde)
 ! Expires: 1 day
-! Version: 2026.11.09
+! Version: 2026.11.20
 ! License: MIT
 !
 youtube.com###center.ytd-masthead
@@ -172,6 +172,21 @@ youtube.com##ytd-guide-section-renderer:has(a[title="Shopping"])
 youtube.com##ytd-guide-section-renderer:has(a[title="YouTube Premium"])
 youtube.com##ytd-in-feed-ad-layout-renderer
 youtube.com##ytd-item-section-renderer.ytd-watch-next-secondary-results-renderer > #contents
+youtube.com##ytd-masthead #buttons ytd-button-renderer:has([aria-label*="Crear" i])
+youtube.com##ytd-masthead #buttons ytd-button-renderer:has([aria-label*="Create" i])
+youtube.com##ytd-masthead #buttons ytd-button-renderer:has([aria-label*="Criar" i])
+youtube.com##ytd-masthead #buttons ytd-button-renderer:has([aria-label*="Créer" i])
+youtube.com##ytd-masthead #buttons ytd-button-renderer:has([aria-label*="Erstellen" i])
+youtube.com##ytd-masthead #buttons ytd-button-renderer:has([aria-label*="बनाएं" i])
+youtube.com##ytd-masthead #buttons ytd-button-renderer:has([aria-label*="创建" i])
+youtube.com##ytd-masthead #buttons ytd-button-renderer:has([aria-label*="建立" i])
+youtube.com##ytd-masthead #buttons ytd-button-renderer:has(a[href*="/create"])
+youtube.com##ytd-masthead #buttons ytd-button-renderer:has(a[href*="/upload"])
+youtube.com##ytd-masthead #buttons ytd-button-renderer:has(a[href*="studio.youtube.com"])
+youtube.com##ytd-masthead #buttons ytd-button-renderer:has(button[aria-label*="Create" i])
+youtube.com##ytd-masthead #buttons ytd-button-renderer:has(path[d*="M14 13"])
+youtube.com##ytd-masthead #buttons ytd-button-renderer:has(path[d*="M19 13"])
+youtube.com##ytd-masthead #buttons ytd-button-renderer:has(yt-icon-button[aria-label*="Create" i])
 youtube.com##ytd-masthead #center
 youtube.com##ytd-masthead #search
 youtube.com##ytd-masthead .ytSearchboxComponentHost
@@ -220,6 +235,7 @@ youtube.com##ytd-statement-banner-renderer
 youtube.com##ytd-subscribe-button-renderer
 youtube.com##ytd-thumbnail
 youtube.com##ytd-thumbnail img
+youtube.com##ytd-topbar-menu-button-renderer:has([aria-label*="Notifications" i])
 youtube.com##ytd-two-column-search-results-renderer ytd-horizontal-card-list-renderer
 youtube.com##ytd-two-column-search-results-renderer ytd-shelf-renderer
 youtube.com##ytd-video-meta-block span.ytd-video-meta-block:first-of-type
@@ -247,11 +263,18 @@ youtube.com##ytm-browse[page-subtype="home"] ytm-feed
 youtube.com##ytm-browse[page-subtype="subscriptions"] ytm-feed
 youtube.com##ytm-comments-section-renderer
 youtube.com##ytm-mobile-topbar-renderer .header-search-box
+youtube.com##ytm-notification-topbar-button-renderer
+youtube.com##ytm-pivot-bar-item-renderer:has([aria-label*="Create" i])
+youtube.com##ytm-pivot-bar-item-renderer:has([data-pivot-id="create"])
+youtube.com##ytm-pivot-bar-item-renderer:has([data-pivot-id="notifications"])
 youtube.com##ytm-pivot-bar-item-renderer:has([data-pivot-id="shorts"])
 youtube.com##ytm-pivot-bar-item-renderer:has([href="/"])
 youtube.com##ytm-pivot-bar-item-renderer:has([href="/home"])
 youtube.com##ytm-pivot-bar-item-renderer:has([href="/shorts"])
 youtube.com##ytm-pivot-bar-item-renderer:has([href^="/shorts"])
+youtube.com##ytm-pivot-bar-item-renderer:has(a[href*="/notifications"])
+youtube.com##ytm-pivot-bar-item-renderer:has(a[href*="/upload"])
+youtube.com##ytm-pivot-bar-item-renderer:has(a[href*="studio.youtube.com"])
 youtube.com##ytm-pivot-bar-item-renderer:has-text(Shorts)
 youtube.com##ytm-pivot-bar-renderer
 youtube.com##ytm-playlist-thumbnail

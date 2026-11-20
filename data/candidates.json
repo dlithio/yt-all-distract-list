@@ -2061,6 +2061,181 @@
     "in_supplement": false
   },
   {
+    "selector": "ytd-masthead",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #buttons ytd-button-renderer:has([aria-label*=\"Crear\" i])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #buttons ytd-button-renderer:has([aria-label*=\"Create\" i])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #buttons ytd-button-renderer:has([aria-label*=\"Criar\" i])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #buttons ytd-button-renderer:has([aria-label*=\"Cr\u00e9er\" i])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #buttons ytd-button-renderer:has([aria-label*=\"Erstellen\" i])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #buttons ytd-button-renderer:has([aria-label*=\"\u092c\u0928\u093e\u090f\u0902\" i])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #buttons ytd-button-renderer:has([aria-label*=\"\u521b\u5efa\" i])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #buttons ytd-button-renderer:has([aria-label*=\"\u5efa\u7acb\" i])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #buttons ytd-button-renderer:has(a[href*=\"/create\"])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #buttons ytd-button-renderer:has(a[href*=\"/upload\"])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #buttons ytd-button-renderer:has(a[href*=\"studio.youtube.com\"])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #buttons ytd-button-renderer:has(button[aria-label*=\"Create\" i])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #buttons ytd-button-renderer:has(path[d*=\"M14 13\"])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #buttons ytd-button-renderer:has(path[d*=\"M19 13\"])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-masthead #buttons ytd-button-renderer:has(yt-icon-button[aria-label*=\"Create\" i])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
     "selector": "ytd-masthead #center",
     "sources": [
       "css"
@@ -2313,6 +2488,17 @@
   {
     "selector": "ytd-mini-guide-renderer",
     "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": true,
+    "in_supplement": true
+  },
+  {
+    "selector": "ytd-notification-topbar-button-renderer",
+    "sources": [
+      "css",
       "string"
     ],
     "scoped": false,
@@ -2853,6 +3039,17 @@
     "in_supplement": false
   },
   {
+    "selector": "ytd-topbar-menu-button-renderer:has([aria-label*=\"Notifications\" i])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
     "selector": "ytd-transcript-segment-list-renderer",
     "sources": [
       "string"
@@ -3282,11 +3479,32 @@
     "in_supplement": false
   },
   {
+    "selector": "ytm-mobile-topbar-renderer",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
     "selector": "ytm-mobile-topbar-renderer .header-search-box",
     "sources": [
       "css"
     ],
     "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-notification-topbar-button-renderer",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": false,
     "guard": null,
     "published": true,
     "in_supplement": false
@@ -3309,6 +3527,39 @@
     "scoped": true,
     "guard": null,
     "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-pivot-bar-item-renderer:has([aria-label*=\"Create\" i])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-pivot-bar-item-renderer:has([data-pivot-id=\"create\"])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-pivot-bar-item-renderer:has([data-pivot-id=\"notifications\"])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
     "in_supplement": false
   },
   {
@@ -3355,6 +3606,39 @@
     "selector": "ytm-pivot-bar-item-renderer:has([href^=\"/shorts\"])",
     "sources": [
       "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-pivot-bar-item-renderer:has(a[href*=\"/notifications\"])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-pivot-bar-item-renderer:has(a[href*=\"/upload\"])",
+    "sources": [
+      "css",
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-pivot-bar-item-renderer:has(a[href*=\"studio.youtube.com\"])",
+    "sources": [
+      "css",
+      "string"
     ],
     "scoped": true,
     "guard": null,
