@@ -1,38 +1,12 @@
 # Maintenance Report
 
-- Generated: 2026.11.20
+- Generated: 2026.11.21
 - Upstream commit: c0094cdea3773c1bfa4f424cdcf592a3fa049616
 - Harvested: 377 | published: 241 | in supplement: 19 | unblocked candidates: 136
 
 ## Changes since last run
 
-**New upstream selectors:**
-- `ytd-masthead`
-- `ytd-masthead #buttons ytd-button-renderer:has([aria-label*="Crear" i])`
-- `ytd-masthead #buttons ytd-button-renderer:has([aria-label*="Create" i])`
-- `ytd-masthead #buttons ytd-button-renderer:has([aria-label*="Criar" i])`
-- `ytd-masthead #buttons ytd-button-renderer:has([aria-label*="Créer" i])`
-- `ytd-masthead #buttons ytd-button-renderer:has([aria-label*="Erstellen" i])`
-- `ytd-masthead #buttons ytd-button-renderer:has([aria-label*="बनाएं" i])`
-- `ytd-masthead #buttons ytd-button-renderer:has([aria-label*="创建" i])`
-- `ytd-masthead #buttons ytd-button-renderer:has([aria-label*="建立" i])`
-- `ytd-masthead #buttons ytd-button-renderer:has(a[href*="/create"])`
-- `ytd-masthead #buttons ytd-button-renderer:has(a[href*="/upload"])`
-- `ytd-masthead #buttons ytd-button-renderer:has(a[href*="studio.youtube.com"])`
-- `ytd-masthead #buttons ytd-button-renderer:has(button[aria-label*="Create" i])`
-- `ytd-masthead #buttons ytd-button-renderer:has(path[d*="M14 13"])`
-- `ytd-masthead #buttons ytd-button-renderer:has(path[d*="M19 13"])`
-- `ytd-masthead #buttons ytd-button-renderer:has(yt-icon-button[aria-label*="Create" i])`
-- `ytd-notification-topbar-button-renderer`
-- `ytd-topbar-menu-button-renderer:has([aria-label*="Notifications" i])`
-- `ytm-mobile-topbar-renderer`
-- `ytm-notification-topbar-button-renderer`
-- `ytm-pivot-bar-item-renderer:has([aria-label*="Create" i])`
-- `ytm-pivot-bar-item-renderer:has([data-pivot-id="create"])`
-- `ytm-pivot-bar-item-renderer:has([data-pivot-id="notifications"])`
-- `ytm-pivot-bar-item-renderer:has(a[href*="/notifications"])`
-- `ytm-pivot-bar-item-renderer:has(a[href*="/upload"])`
-- `ytm-pivot-bar-item-renderer:has(a[href*="studio.youtube.com"])`
+_No new selectors._
 
 _No removed selectors._
 
