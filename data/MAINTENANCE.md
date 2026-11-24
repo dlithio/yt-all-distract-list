@@ -1,12 +1,18 @@
 # Maintenance Report
 
-- Generated: 2026.11.23
-- Upstream commit: c0094cdea3773c1bfa4f424cdcf592a3fa049616
-- Harvested: 377 | published: 241 | in supplement: 19 | unblocked candidates: 136
+- Generated: 2026.11.24
+- Upstream commit: 45818b36991325d27bd09065484e66b902a83e16
+- Harvested: 383 | published: 241 | in supplement: 19 | unblocked candidates: 142
 
 ## Changes since last run
 
-_No new selectors._
+**New upstream selectors:**
+- `.yt-spec-icon-badge-shape__badge`
+- `ytd-notification-topbar-button-renderer #notification-count`
+- `ytd-notification-topbar-button-renderer .yt-spec-icon-badge-shape__badge`
+- `ytd-notification-topbar-button-renderer button[aria-label]`
+- `ytd-notification-topbar-button-renderer yt-icon-button[aria-label]`
+- `ytm-notification-topbar-button-renderer .yt-spec-icon-badge-shape__badge`
 
 _No removed selectors._
 
@@ -19,6 +25,7 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `#secondary ytd-playlist-panel-renderer`
 - `#secondary-inner`
 - `.button-container ytd-button-renderer`
+- `.yt-spec-icon-badge-shape__badge`
 - `.ytm-autonav-toggle-button-container button`
 - `.ytp-autonav-endscreen`
 - `.ytp-autonav-endscreen-countdown`
@@ -77,6 +84,10 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `ytd-mini-guide-entry-renderer a[href^="/shorts"]`
 - `ytd-mini-guide-entry-renderer a[title="Home"]`
 - `ytd-mini-guide-entry-renderer a[title="Shorts"]`
+- `ytd-notification-topbar-button-renderer #notification-count`
+- `ytd-notification-topbar-button-renderer .yt-spec-icon-badge-shape__badge`
+- `ytd-notification-topbar-button-renderer button[aria-label]`
+- `ytd-notification-topbar-button-renderer yt-icon-button[aria-label]`
 - `ytd-player`
 - `ytd-playlist-panel-renderer`
 - `ytd-playlist-panel-view-model`
@@ -112,6 +123,7 @@ Selectors the extension references that your list does NOT block. Add the ones y
 - `ytm-item-section-renderer:has(ytm-post-renderer)`
 - `ytm-item-section-renderer[section-identifier="related-items"]`
 - `ytm-mobile-topbar-renderer`
+- `ytm-notification-topbar-button-renderer .yt-spec-icon-badge-shape__badge`
 - `ytm-pivot-bar-item-renderer`
 - `ytm-pivot-bar-item-renderer a[href="/shorts"]`
 - `ytm-pivot-bar-renderer a[title="Shorts"]`

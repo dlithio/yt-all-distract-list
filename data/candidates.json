@@ -391,6 +391,16 @@
     "in_supplement": false
   },
   {
+    "selector": ".yt-spec-icon-badge-shape__badge",
+    "sources": [
+      "string"
+    ],
+    "scoped": false,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
     "selector": ".ytd-display-ad-renderer #media-container",
     "sources": [
       "css"
@@ -2507,6 +2517,46 @@
     "in_supplement": true
   },
   {
+    "selector": "ytd-notification-topbar-button-renderer #notification-count",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-notification-topbar-button-renderer .yt-spec-icon-badge-shape__badge",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-notification-topbar-button-renderer button[aria-label]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-notification-topbar-button-renderer yt-icon-button[aria-label]",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
+    "in_supplement": false
+  },
+  {
     "selector": "ytd-page-manager",
     "sources": [
       "string"
@@ -3507,6 +3557,16 @@
     "scoped": false,
     "guard": null,
     "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytm-notification-topbar-button-renderer .yt-spec-icon-badge-shape__badge",
+    "sources": [
+      "string"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": false,
     "in_supplement": false
   },
   {
