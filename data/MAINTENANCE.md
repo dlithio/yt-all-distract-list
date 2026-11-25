@@ -1,18 +1,12 @@
 # Maintenance Report
 
-- Generated: 2026.11.24
-- Upstream commit: 45818b36991325d27bd09065484e66b902a83e16
+- Generated: 2026.11.25
+- Upstream commit: 1566b8a3fc579a8717fd214e282ac985edca5cc1
 - Harvested: 383 | published: 241 | in supplement: 19 | unblocked candidates: 142
 
 ## Changes since last run
 
-**New upstream selectors:**
-- `.yt-spec-icon-badge-shape__badge`
-- `ytd-notification-topbar-button-renderer #notification-count`
-- `ytd-notification-topbar-button-renderer .yt-spec-icon-badge-shape__badge`
-- `ytd-notification-topbar-button-renderer button[aria-label]`
-- `ytd-notification-topbar-button-renderer yt-icon-button[aria-label]`
-- `ytm-notification-topbar-button-renderer .yt-spec-icon-badge-shape__badge`
+_No new selectors._
 
 _No removed selectors._
 
