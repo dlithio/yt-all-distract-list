@@ -1087,6 +1087,16 @@
     "in_supplement": false
   },
   {
+    "selector": "grid-shelf-view-model:has(a[href*=\"/playables\" i])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
     "selector": "more-from-yt-spacer",
     "sources": [
       "string"
@@ -2031,6 +2041,36 @@
     "in_supplement": false
   },
   {
+    "selector": "ytd-horizontal-card-list-renderer:has(a[href*=\"/playables\" i])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-horizontal-card-list-renderer:has(mini-game-card-view-model)",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-horizontal-card-list-renderer:has(ytd-mini-game-card-view-model)",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
     "selector": "ytd-item-section-renderer",
     "sources": [
       "string"
@@ -2819,6 +2859,16 @@
     "in_supplement": false
   },
   {
+    "selector": "ytd-rich-section-renderer:has(a[href*=\"/playables\" i])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
     "selector": "ytd-rich-section-renderer:has(a[href*=\"members-only\" i])",
     "sources": [
       "css"
@@ -2870,6 +2920,16 @@
   },
   {
     "selector": "ytd-rich-shelf-renderer:has(a[href*=\"/channel_memberships\" i])",
+    "sources": [
+      "css"
+    ],
+    "scoped": true,
+    "guard": null,
+    "published": true,
+    "in_supplement": false
+  },
+  {
+    "selector": "ytd-rich-shelf-renderer:has(a[href*=\"/playables\" i])",
     "sources": [
       "css"
     ],

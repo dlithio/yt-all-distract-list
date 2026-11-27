@@ -3,7 +3,7 @@
 ! Homepage: https://github.com/dlithio/yt-all-distract-list
 ! Source extension: https://github.com/KartikHalkunde/LockedIn-YT (MIT, © Kartik Halkunde)
 ! Expires: 1 day
-! Version: 2026.11.20
+! Version: 2026.11.27
 ! License: MIT
 !
 youtube.com###center.ytd-masthead
@@ -101,6 +101,7 @@ youtube.com##[page-subtype="search"] ytd-video-renderer:has(ytd-thumbnail-overla
 youtube.com##button.ytp-autonav-toggle-button
 youtube.com##dislike-button-view-model
 youtube.com##grid-shelf-view-model:has([href^="/shorts/"])
+youtube.com##grid-shelf-view-model:has(a[href*="/playables" i])
 youtube.com##like-button-view-model
 youtube.com##segmented-like-dislike-button-view-model
 youtube.com##tp-yt-paper-tab:has(a[href="/"])
@@ -170,6 +171,9 @@ youtube.com##ytd-guide-entry-renderer:has(a[title="Your videos"])
 youtube.com##ytd-guide-renderer
 youtube.com##ytd-guide-section-renderer:has(a[title="Shopping"])
 youtube.com##ytd-guide-section-renderer:has(a[title="YouTube Premium"])
+youtube.com##ytd-horizontal-card-list-renderer:has(a[href*="/playables" i])
+youtube.com##ytd-horizontal-card-list-renderer:has(mini-game-card-view-model)
+youtube.com##ytd-horizontal-card-list-renderer:has(ytd-mini-game-card-view-model)
 youtube.com##ytd-in-feed-ad-layout-renderer
 youtube.com##ytd-item-section-renderer.ytd-watch-next-secondary-results-renderer > #contents
 youtube.com##ytd-masthead #buttons ytd-button-renderer:has([aria-label*="Crear" i])
@@ -217,11 +221,13 @@ youtube.com##ytd-rich-item-renderer:has(ytd-thumbnail-overlay-time-status-render
 youtube.com##ytd-rich-item-renderer:not(:hover) ytd-thumbnail
 youtube.com##ytd-rich-section-renderer:has([href^="/shorts/"])
 youtube.com##ytd-rich-section-renderer:has(a[href*="/channel_memberships" i])
+youtube.com##ytd-rich-section-renderer:has(a[href*="/playables" i])
 youtube.com##ytd-rich-section-renderer:has(a[href*="members-only" i])
 youtube.com##ytd-rich-section-renderer:has(ytd-brand-video-shelf-renderer)
 youtube.com##ytd-rich-shelf-renderer:has([href^="/shorts/"])
 youtube.com##ytd-rich-shelf-renderer:has([is-shorts])
 youtube.com##ytd-rich-shelf-renderer:has(a[href*="/channel_memberships" i])
+youtube.com##ytd-rich-shelf-renderer:has(a[href*="/playables" i])
 youtube.com##ytd-rich-shelf-renderer:has(a[href*="members-only" i])
 youtube.com##ytd-search grid-shelf-view-model
 youtube.com##ytd-search ytd-horizontal-card-list-renderer
