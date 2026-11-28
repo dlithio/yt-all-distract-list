@@ -1,18 +1,12 @@
 # Maintenance Report
 
-- Generated: 2026.11.27
+- Generated: 2026.11.28
 - Upstream commit: b61aeaadd05024759c9db0a474bb52cd8c93131f
 - Harvested: 389 | published: 247 | in supplement: 19 | unblocked candidates: 142
 
 ## Changes since last run
 
-**New upstream selectors:**
-- `grid-shelf-view-model:has(a[href*="/playables" i])`
-- `ytd-horizontal-card-list-renderer:has(a[href*="/playables" i])`
-- `ytd-horizontal-card-list-renderer:has(mini-game-card-view-model)`
-- `ytd-horizontal-card-list-renderer:has(ytd-mini-game-card-view-model)`
-- `ytd-rich-section-renderer:has(a[href*="/playables" i])`
-- `ytd-rich-shelf-renderer:has(a[href*="/playables" i])`
+_No new selectors._
 
 _No removed selectors._
 
